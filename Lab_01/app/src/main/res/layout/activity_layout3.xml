@@ -41,6 +41,7 @@
         android:layout_marginTop="40dp"
         android:text="Enter ontime password sent on \n++849092605798"
         android:textAlignment="center"
+        android:textSize="16dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,68 +51,80 @@
 
     <EditText
         android:id="@+id/layout3_edtNumber"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="number"
         android:background="@drawable/border"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout3_textView3" />
 
     <EditText
         android:id="@+id/layout3_edtNumber2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="number"
         android:background="@drawable/border"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/layout3_edtNumber"
         app:layout_constraintTop_toBottomOf="@+id/layout3_textView3" />
 
     <EditText
         android:id="@+id/layout3_edtNumber3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="number"
         android:background="@drawable/border"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/layout3_edtNumber2"
         app:layout_constraintTop_toBottomOf="@+id/layout3_textView3" />
 
     <EditText
         android:id="@+id/layout3_edtNumber4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="number"
         android:background="@drawable/border"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/layout3_edtNumber3"
         app:layout_constraintTop_toBottomOf="@+id/layout3_textView3" />
 
     <EditText
         android:id="@+id/layout3_edtNumber5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="number"
         android:background="@drawable/border"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/layout3_edtNumber4"
         app:layout_constraintTop_toBottomOf="@+id/layout3_textView3" />
 
     <EditText
         android:id="@+id/layout3_edtNumber6"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="number"
         android:background="@drawable/border"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/layout3_edtNumber5"
@@ -119,9 +132,9 @@
 
     <Button
         android:id="@+id/layout3_btnVerifyCode"
-        android:layout_width="380dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="@color/E3C000"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
@@ -131,6 +144,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout3_textView3"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

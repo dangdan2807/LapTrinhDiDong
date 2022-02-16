@@ -11,7 +11,7 @@
         android:id="@+id/layout5_textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:text="REGISTER"
         android:textColor="@color/black"
         android:textSize="35dp"
@@ -23,9 +23,11 @@
 
     <EditText
         android:id="@+id/layout5_edtFullName"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Name"
@@ -40,9 +42,11 @@
 
     <EditText
         android:id="@+id/layout5_edtPhone"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Phone"
@@ -57,9 +61,11 @@
 
     <EditText
         android:id="@+id/layout5_edtEmail"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Email"
@@ -74,9 +80,11 @@
 
     <EditText
         android:id="@+id/layout5_edtPassword"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:drawableRight="@drawable/icon_eye"
         android:ems="10"
@@ -92,9 +100,11 @@
 
     <EditText
         android:id="@+id/layout5_edtBirthday"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Birthday"
@@ -111,7 +121,7 @@
         android:id="@+id/layout5_radMale"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:text="Male"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,9 +143,7 @@
         android:id="@+id/layout5_btnRegister"
         android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="116dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="#E53935"
         android:text="REGISTER"
         android:textSize="20dp"
@@ -143,7 +151,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout5_radMale"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/layout5_textView2"

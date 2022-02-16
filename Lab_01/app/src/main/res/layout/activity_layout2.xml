@@ -11,7 +11,7 @@
         android:id="@+id/layout2_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +39,7 @@
         android:text="Provide your account’s email for which you\nwant to reset your password"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -48,7 +48,7 @@
 
     <EditText
         android:id="@+id/layout2_edtEmail"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/backgroundTextField"
@@ -63,9 +63,9 @@
 
     <Button
         android:id="@+id/layout2_btnNext"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="@color/E3C000"
         android:text="next"
         android:textColor="@color/black"
