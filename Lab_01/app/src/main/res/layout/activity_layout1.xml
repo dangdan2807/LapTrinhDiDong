@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".Layout1">
 
     <Button
         android:id="@+id/btnLogin"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="160dp"
-        android:backgroundTint="#E3C000"
+        android:backgroundTint="@color/E3C000"
         android:text="LOGIN"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -25,7 +25,7 @@
         android:id="@+id/btnSignUp"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E3C000"
+        android:backgroundTint="@color/E3C000"
         android:text="SIGN UP"
         android:textAlignment="center"
         android:textColor="@color/black"

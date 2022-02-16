@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_01">
         <activity
-            android:name=".MainActivity2"
+            android:name=".Layout_3"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Layout2"
+            android:exported="false" />
+        <activity
+            android:name=".Layout1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
