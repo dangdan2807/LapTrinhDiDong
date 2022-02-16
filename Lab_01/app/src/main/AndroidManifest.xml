@@ -10,16 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_01">
         <activity
-            android:name=".Layout4"
+            android:name=".Layout_5"
+            android:exported="false" />
+        <activity
+            android:name=".Layout_4"
             android:exported="false" />
         <activity
             android:name=".Layout_3"
             android:exported="false" />
         <activity
-            android:name=".Layout2"
+            android:name=".Layout_2"
             android:exported="false" />
         <activity
-            android:name=".Layout1"
+            android:name=".Layout_1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

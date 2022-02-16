@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_layout4"
-    tools:context=".Layout4">
+    tools:context=".Layout_4">
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/layout4_textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textView10"
+        android:id="@+id/layout4_textView2"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="90dp"
@@ -36,10 +36,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_textView1" />
 
     <EditText
-        android:id="@+id/textView11"
+        android:id="@+id/layout4_textView3"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
@@ -54,10 +54,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_textView2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/layout4_btnLogin"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="55dp"
@@ -68,10 +68,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_textView3" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/layout4_textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -81,10 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/layout4_textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -94,10 +94,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_textView4" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/layout4_textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -107,10 +107,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_textView5" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/layout4_btnFacebook"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -120,10 +120,10 @@
         android:paddingRight="28dp"
         android:paddingTop="2dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/layout4_btnZalo"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginTop="160dp"
@@ -132,11 +132,11 @@
         android:drawableTop="@drawable/icon_zalo"
         android:paddingRight="18dp"
         android:paddingTop="6dp"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/layout4_btnFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/layout4_btnGoogle"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginTop="160dp"
@@ -145,6 +145,6 @@
         android:drawableBottom="@drawable/icon_google"
         android:paddingRight="18dp"
         android:paddingBottom="1dp"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/layout4_btnZalo"
+        app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
