@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_01">
         <activity
+            android:name=".Layout4"
+            android:exported="false" />
+        <activity
             android:name=".Layout_3"
             android:exported="false" />
         <activity

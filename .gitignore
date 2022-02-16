@@ -1,4 +1,6 @@
+.gitignore
 DemoActivity/*
 UILogin/*
 DemoIntent/*
 DemoListView/*
+Caclulator-app-Android/*
