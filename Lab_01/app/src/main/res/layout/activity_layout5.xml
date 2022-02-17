@@ -25,9 +25,9 @@
         android:id="@+id/layout5_edtFullName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Name"
@@ -44,8 +44,8 @@
         android:id="@+id/layout5_edtPhone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
@@ -63,9 +63,9 @@
         android:id="@+id/layout5_edtEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Email"
@@ -82,9 +82,9 @@
         android:id="@+id/layout5_edtPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:drawableRight="@drawable/icon_eye"
         android:ems="10"
@@ -102,9 +102,9 @@
         android:id="@+id/layout5_edtBirthday"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:background="@color/backgroundTextField2"
         android:ems="10"
         android:hint="Birthday"
@@ -117,43 +117,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout5_edtPassword" />
 
-    <RadioButton
-        android:id="@+id/layout5_radMale"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Male"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout5_edtBirthday"
-        app:layout_constraintVertical_bias="0.101" />
 
-    <RadioButton
-        android:id="@+id/layout5_radFemale"
-        android:layout_width="100dp"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="148dp"
-        android:text="Female"
-        app:layout_constraintBottom_toBottomOf="@+id/layout5_radMale"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
-        app:layout_constraintStart_toEndOf="@+id/layout5_radMale" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout5_edtBirthday">
+
+        <RadioButton
+            android:id="@+id/layout5_radMale"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/layout6_radFeMale"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="-48dp"
+            android:text="Female" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/layout5_btnRegister"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginLeft="16dp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="@color/bgBtnE53935"
         android:text="REGISTER"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout5_radMale"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/layout5_textView2"
@@ -166,6 +171,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout5_btnRegister" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

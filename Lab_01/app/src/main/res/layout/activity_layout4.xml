@@ -61,7 +61,7 @@
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="@color/bgBtnE53935"
         android:text="LOGIN"
         android:textSize="20dp"
         android:textStyle="bold"

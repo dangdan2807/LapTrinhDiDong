@@ -114,7 +114,7 @@
         android:paddingLeft="16dp"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:background="@drawable/borderradius"
+        android:background="@drawable/border_layout_comment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutComment_btnAddImg" />

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <ImageView
+        android:id="@+id/layoutProfile_imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/background_profile" />
+
+    <View
+        android:id="@+id/layoutProfile_view3"
+        android:layout_width="match_parent"
+        android:layout_height="264dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_layout_profile"
+        android:translationZ="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/layoutProfile_imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_profile2" />
+
+    <ImageView
+        android:id="@+id/layoutProfile_imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/donaltrum" />
+
+    <TextView
+        android:id="@+id/layoutProfile_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="DONAL TRUMP"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutProfile_view3"
+        app:layout_constraintStart_toStartOf="@+id/layoutProfile_view3"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile_imageView2" />
+
+    <TextView
+        android:id="@+id/layoutProfile_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Full Stack developer, Android UI"
+        android:textColor="#595959"
+        android:textSize="17dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutProfile_view3"
+        app:layout_constraintStart_toStartOf="@+id/layoutProfile_view3"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile_textView1" />
+
+    <TextView
+        android:id="@+id/layoutProfile_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Donald Trump is closely associated with\nthe sport of golf. As a real estate\ndeveloper, Trump began acquiring and\nconstructing golf courses in 1999"
+        android:textAlignment="center"
+        android:textColor="#737373"
+        android:textSize="15dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutProfile_view3"
+        app:layout_constraintStart_toStartOf="@+id/layoutProfile_view3"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile_textView2" />
+
+    <TextView
+        android:id="@+id/layoutProfile_textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="New York, USA"
+        android:textColor="#4c4c4c"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutProfile_view3"
+        app:layout_constraintStart_toStartOf="@+id/layoutProfile_view3"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile_textView3" />
+
+    <TextView
+        android:id="@+id/layoutProfile_textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="9.8\nrating"
+        android:textAlignment="center"
+        android:textColor="#4c4c4c"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile_view3" />
+
+    <TextView
+        android:id="@+id/layoutProfile_textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:text="178\nprojects"
+        android:textAlignment="center"
+        android:textColor="#4c4c4c"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutProfile_textView5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/layoutProfile_btnPortfolio"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Portfolio"
+        android:textColor="#e13dd0"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"
+        android:backgroundTint="@android:color/transparent"
+        app:cornerRadius="0dp"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="#6c30ce"
+        app:strokeWidth="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfile_textView5" />
+
+    <Button
+        android:id="@+id/layoutProfile_btnHireMe"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="Hire Me"
+        android:textColor="#06896a"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"
+        android:backgroundTint="@android:color/transparent"
+        app:cornerRadius="0dp"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="#6c30ce"
+        app:strokeWidth="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutProfile_btnPortfolio"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

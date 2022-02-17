@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_01">
         <activity
+            android:name=".Tiki"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".PasswordGenerator"
+            android:exported="false" />
+        <activity
             android:name=".Comments"
             android:exported="false" />
         <activity
@@ -35,7 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".Layout_1"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

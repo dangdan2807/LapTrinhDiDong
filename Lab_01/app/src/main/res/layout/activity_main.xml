@@ -21,57 +21,88 @@
 
     <Button
         android:id="@+id/layoutMain_btnLayoutA"
-        android:layout_width="wrap_content"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
+        android:layout_marginStart="6dp"
         android:layout_marginTop="48dp"
-        android:text="Layout A"
+        android:text="1_A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutMain_textView" />
 
     <Button
         android:id="@+id/layoutMain_btnLayoutB"
-        android:layout_width="wrap_content"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:text="Layout B"
+        android:layout_marginStart="6dp"
+        android:text="1_b"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutA"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutA" />
 
     <Button
         android:id="@+id/layoutMain_btnLayoutC"
-        android:layout_width="wrap_content"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:text="Layout C"
+        android:layout_marginStart="6dp"
+        android:text="1_C"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutB"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutB" />
 
     <Button
         android:id="@+id/layoutMain_btnLayoutD"
-        android:layout_width="wrap_content"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="28dp"
-        android:text="Layout D"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:text="1_D"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutMain_btnLayoutA" />
 
     <Button
         android:id="@+id/layoutMain_btnLayoutE"
-        android:layout_width="wrap_content"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:text="Layout E"
+        android:layout_marginStart="6dp"
+        android:text="1_E"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutD"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutD" />
 
     <Button
-        android:id="@+id/layoutMain_btnComment"
-        android:layout_width="wrap_content"
+        android:id="@+id/layoutMain_btnLayoutTiki"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:text="Comment"
+        android:layout_marginStart="6dp"
+        android:text="Tiki"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutE"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutE" />
+
+    <Button
+        android:id="@+id/layoutMain_btnLayoutComment"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:text="Comment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMain_btnLayoutD" />
+
+    <Button
+        android:id="@+id/layoutMain_btnLayoutProfile"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Profile"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutComment"
+        app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutComment" />
+
+    <Button
+        android:id="@+id/layoutMain_btnLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="8dp"
+        android:text="Password Generator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMain_btnLayoutComment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

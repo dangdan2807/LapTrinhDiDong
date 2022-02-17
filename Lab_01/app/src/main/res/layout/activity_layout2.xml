@@ -66,7 +66,7 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@color/E3C000"
+        android:backgroundTint="@color/bgBtnE3C000"
         android:text="next"
         android:textColor="@color/black"
         android:textAllCaps="true"
