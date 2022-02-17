@@ -23,7 +23,7 @@
         android:id="@+id/layoutMain_btnLayoutA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="48dp"
         android:text="Layout A"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:id="@+id/layoutMain_btnLayoutB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="9dp"
         android:text="Layout B"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutA"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutA" />
@@ -42,7 +42,7 @@
         android:id="@+id/layoutMain_btnLayoutC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="9dp"
         android:text="Layout C"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutB"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutB" />
@@ -51,7 +51,7 @@
         android:id="@+id/layoutMain_btnLayoutD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="28dp"
         android:text="Layout D"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:id="@+id/layoutMain_btnLayoutE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="9dp"
         android:text="Layout E"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutD"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutD" />
@@ -70,7 +70,7 @@
         android:id="@+id/layoutMain_btnComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="9dp"
         android:text="Comment"
         app:layout_constraintBottom_toBottomOf="@+id/layoutMain_btnLayoutE"
         app:layout_constraintStart_toEndOf="@+id/layoutMain_btnLayoutE" />

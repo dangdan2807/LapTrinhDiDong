@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnLayoutA, btnLayoutB, btnLayoutC, btnLayoutD, btnLayoutE;
+    private Button btnLayoutComments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnLayoutC = findViewById(R.id.layoutMain_btnLayoutC);
         btnLayoutD = findViewById(R.id.layoutMain_btnLayoutD);
         btnLayoutE = findViewById(R.id.layoutMain_btnLayoutE);
+        btnLayoutComments = findViewById(R.id.layoutMain_btnComment);
         setEventClick();
     }
 
@@ -59,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, Layout_5.class);
+                startActivity(i);
+            }
+        });
+        btnLayoutComments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Comments.class);
                 startActivity(i);
             }
         });
