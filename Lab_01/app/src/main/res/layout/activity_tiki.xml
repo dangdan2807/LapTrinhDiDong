@@ -7,4 +7,330 @@
     android:background="#C4C4C4"
     tools:context=".Tiki">
 
+    <View
+        android:id="@+id/layoutTiki_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:background="@color/white"
+        android:translationZ="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/layoutTiki_imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tiki_book" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Nguyên hàm tích phân và ứng dụng"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageView1"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view1" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvSupplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="6dp"
+        android:text="Cung cấp bởi Tiki Trading"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvProductName" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="32dp"
+        android:text="141.800 đ"
+        android:textColor="#EE0D0D"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvSupplier" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvOldPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="32dp"
+        android:text="141.800 đ"
+        android:textStyle="bold"
+        android:textColor="#808080"
+        android:textSize="12dp"
+
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvPrice" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnBuyLater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:stateListAnimator="@null"
+        android:text="Mua sau"
+        android:textColor="#134FEC"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvPrice" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnSubtract"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/btnminus"
+        android:paddingLeft="8dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvOldPrice" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnMulti"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="8dp"
+        android:text="@null"
+        android:drawableLeft="@drawable/btnadd"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_tvCountOrder"
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_tvCountOrder"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_tvCountOrder" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvCountOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_btnSubtract"
+        app:layout_constraintStart_toEndOf="@+id/layoutTiki_btnSubtract"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_btnSubtract" />
+
+    <TextView
+        android:id="@+id/layoutTiki_layoutTiki_tvTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:text="Mã giảm giá đã lưu"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_imageView1" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnSeeHere"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="118dp"
+        android:backgroundTint="@color/white"
+        android:paddingBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="Xem tại đây"
+        android:textColor="#134FEC"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_imageView1" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnVoucher"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:text="Mã giảm giá"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:stateListAnimator="@null"
+        android:drawableLeft="@drawable/yellow_block"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="4dp"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_layoutTiki_tvTotalPrice" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:backgroundTint="#0A5EB7"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Áp dụng"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_view1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/layoutTiki_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_view1" />
+
+    <TextView
+        android:id="@+id/layoutTiki_textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:text="Bạn có phiếu quà tặng Tiki/Got it/ Urbox?"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view2" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnEnterHere"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:backgroundTint="@color/white"
+        android:paddingBottom="0dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginEnd="14dp"
+        android:stateListAnimator="@null"
+        android:text="Nhập tại đây?"
+        android:textAllCaps="false"
+        android:textColor="#134FEC"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view2" />
+
+    <View
+        android:id="@+id/layoutTiki_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_view2"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <TextView
+        android:id="@+id/layoutTiki_textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Tạm tính"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view3" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvTempPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="141.800 đ"
+        android:textColor="#EE0D0D"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_textView8"
+        app:layout_constraintEnd_toEndOf="@+id/layoutTiki_view3" />
+
+    <View
+        android:id="@+id/layoutTiki_view4"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/layoutTiki_textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:text="Thành tiền"
+        android:textColor="#808080"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view4" />
+
+    <TextView
+        android:id="@+id/layoutTiki_tvTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="141.800 đ"
+        android:textStyle="bold"
+        android:textColor="#EE0D0D"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_textView9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/layoutTiki_btnOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="TIẾN HÀNH ĐẶT HÀNG"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/bgBtnE53935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_textView9" />
 </androidx.constraintlayout.widget.ConstraintLayout>

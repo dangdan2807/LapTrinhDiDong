@@ -83,14 +83,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
 
-    <TextView
-        android:id="@+id/layout4_textView5"
+    <Button
+        android:id="@+id/layout4_btnForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="4dp"
         android:text="For got your password?"
         android:textColor="#5D25FA"
         android:textSize="14dp"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,21 +103,21 @@
         android:id="@+id/layout4_textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="4dp"
         android:text="Or login with"
         android:textColor="@color/black"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout4_textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/layout4_btnForgotPassword" />
 
     <Button
         android:id="@+id/layout4_btnFacebook"
         android:layout_width="105dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="140dp"
         android:backgroundTint="#25479B"
         android:drawableTop="@drawable/icon_facebook"
         android:paddingRight="28dp"
@@ -126,25 +129,23 @@
         android:id="@+id/layout4_btnZalo"
         android:layout_width="105dp"
         android:layout_height="50dp"
-        android:layout_marginTop="130dp"
-        android:text=""
         android:backgroundTint="#0F8EE0"
         android:drawableTop="@drawable/icon_zalo"
-        android:paddingRight="18dp"
         android:paddingTop="6dp"
-        app:layout_constraintStart_toEndOf="@+id/layout4_btnFacebook"
-        app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
+        android:paddingRight="18dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/layout4_btnFacebook"
+        app:layout_constraintStart_toEndOf="@+id/layout4_btnFacebook" />
 
     <Button
         android:id="@+id/layout4_btnGoogle"
         android:layout_width="105dp"
         android:layout_height="50dp"
-        android:layout_marginTop="130dp"
-        android:text=""
         android:backgroundTint="#FFFFFF"
         android:drawableBottom="@drawable/icon_google"
         android:paddingRight="18dp"
         android:paddingBottom="1dp"
-        app:layout_constraintStart_toEndOf="@+id/layout4_btnZalo"
-        app:layout_constraintTop_toBottomOf="@+id/layout4_btnLogin" />
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/layout4_btnZalo"
+        app:layout_constraintStart_toEndOf="@+id/layout4_btnZalo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
