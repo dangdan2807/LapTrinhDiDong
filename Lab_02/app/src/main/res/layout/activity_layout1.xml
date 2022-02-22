@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_1"
+    android:background="@drawable/gradient_background_1"
     tools:context=".Layout1">
 
     <TextView
@@ -21,10 +21,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/layout1_textView2"
-        android:layout_width="320dp"
+        android:id="@+id/layout1_edtName"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:paddingLeft="10dp"
         android:drawableLeft="@drawable/avatar_user"
         android:ems="10"
@@ -32,17 +34,19 @@
         android:inputType="textEmailAddress"
         android:text=""
         android:textSize="20dp"
-        android:background="#ededed"
+        android:background="#dbbc3b"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout1_textView1" />
 
     <EditText
-        android:id="@+id/layout1_textView3"
-        android:layout_width="320dp"
+        android:id="@+id/layout1_edtPassword"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:drawableRight="@drawable/icon_eye"
@@ -51,26 +55,30 @@
         android:inputType="textPassword"
         android:text=""
         android:textSize="20dp"
-        android:background="#ededed"
+        android:background="#dbbc3b"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout1_textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/layout1_edtName" />
 
     <Button
         android:id="@+id/layout1_btnLogin"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/black"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
         android:text="LOGIN"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/white"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout1_textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/layout1_edtPassword" />
 
     <Button
         android:id="@+id/layout1_btnForgotPassword"
@@ -82,7 +90,7 @@
         android:text="For got your password?"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
