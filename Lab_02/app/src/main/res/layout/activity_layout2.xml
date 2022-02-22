@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C4C4C4"
-    tools:context=".Comments">
+    tools:context=".Layout2">
 
     <View
-        android:id="@+id/layoutComment_view1"
+        android:id="@+id/layout2_view1"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="@color/white"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/layoutComment_view2"
+        android:id="@+id/layout2_view2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -25,10 +25,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutComment_view1" />
+        app:layout_constraintTop_toBottomOf="@+id/layout2_view1" />
 
     <ImageView
-        android:id="@+id/layoutComment_imageView1"
+        android:id="@+id/layout2_imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/usb" />
 
     <TextView
-        android:id="@+id/layoutComment_textView1"
+        android:id="@+id/layout2_textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -46,13 +46,13 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutComment_view1"
-        app:layout_constraintStart_toEndOf="@+id/layoutComment_imageView1"
-        app:layout_constraintTop_toTopOf="@+id/layoutComment_view1"
+        app:layout_constraintBottom_toBottomOf="@+id/layout2_view1"
+        app:layout_constraintStart_toEndOf="@+id/layout2_imageView1"
+        app:layout_constraintTop_toTopOf="@+id/layout2_view1"
         app:layout_constraintVertical_bias="0.47" />
 
     <TextView
-        android:id="@+id/layoutComment_textView2"
+        android:id="@+id/layout2_textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -62,10 +62,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/layoutComment_view2" />
+        app:layout_constraintTop_toTopOf="@+id/layout2_view2" />
 
     <RatingBar
-        android:id="@+id/layoutComment_ratingBar"
+        android:id="@+id/layout2_ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -73,60 +73,60 @@
         android:secondaryProgressTint="@color/star"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutComment_textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/layout2_textView2" />
 
     <Button
-        android:id="@+id/layoutComment_btnAddImg"
+        android:id="@+id/layout2_btnAddImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/camera"
+        android:paddingLeft="40dp"
+        android:paddingTop="12dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="12dp"
         android:text="Thêm hình ảnh"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="16dp"
-        android:drawableLeft="@drawable/camera"
-        android:backgroundTint="@color/white"
-        android:paddingLeft="40dp"
-        android:paddingRight="60dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
+        android:textStyle="bold"
         app:cornerRadius="8dp"
-        app:rippleColor="#33AAAAAA"
-        app:strokeColor="#1511EB"
-        app:strokeWidth="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutComment_ratingBar" />
+        app:layout_constraintTop_toBottomOf="@+id/layout2_ratingBar"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="#1511EB"
+        app:strokeWidth="2dp" />
 
     <EditText
-        android:id="@+id/layoutComment_edtReview"
+        android:id="@+id/layout2_edtReview"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="35dp"
-        android:ems="10"
-        android:hint="Hãy chi sẻ những điều mà bạn thích về sản phẩm"
+        android:paddingLeft="16dp"
         android:paddingTop="8dp"
         android:paddingBottom="4dp"
-        android:paddingLeft="16dp"
+        android:ems="10"
         android:gravity="start|top"
+        android:hint="Hãy chia sẻ những điều mà bạn thích về sản phẩm"
         android:inputType="textMultiLine"
         android:background="@drawable/border_layout_comment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutComment_btnAddImg" />
+        app:layout_constraintTop_toBottomOf="@+id/layout2_btnAddImg" />
 
     <Button
-        android:id="@+id/layoutComment_btnSubmit"
+        android:id="@+id/layout2_btnSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Gửi"
-        android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:text="Gửi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutComment_edtReview" />
+        app:layout_constraintTop_toBottomOf="@+id/layout2_edtReview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

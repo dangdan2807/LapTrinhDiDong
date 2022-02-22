@@ -29,9 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(MainActivity.this, Layout1.class);
             startActivity(i);
         } else if (o.equals(btnLayoutB)) {
-
+            Intent i = new Intent(MainActivity.this, Layout2.class);
+            startActivity(i);
         } else if (o.equals(btnLayoutC)) {
-
+            Intent i = new Intent(MainActivity.this, Layout3.class);
+            startActivity(i);
         }
     }
 }

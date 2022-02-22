@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_02">
         <activity
+            android:name=".Layout3"
+            android:exported="false" />
+        <activity
+            android:name=".Layout2"
+            android:exported="false" />
+        <activity
             android:name=".Layout1"
             android:exported="false" />
         <activity
