@@ -37,19 +37,21 @@ public class Layout2 extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 double rating = ratingBar.getRating();
+                String content = "";
                 if (rating >= 5.0) {
-                    tvReview.setText("Cực kỳ hài lòng");
-                } else if (rating < 5.0 && rating >= 4.0) {
-                    tvReview.setText("Hài lòng");
-                } else if (rating < 4.0 && rating >= 3.0) {
-                    tvReview.setText("Bình thường");
-                } else if (rating < 3.0 && rating >= 2.0) {
-                    tvReview.setText("Không hài lòng");
-                } else if (rating < 2.0 && rating >= 1.0) {
-                    tvReview.setText("Tệ");
+                    content = "Cực kỳ hài lòng";
+                } else if (rating >= 4.0 && rating < 5.0) {
+                    content = "Hài lòng";
+                } else if (rating >= 3.0 && rating < 4.0) {
+                    content = "Bình thường";
+                } else if (rating >= 2.0 && rating < 3.0) {
+                    content = "Không hài lòng";
+                } else if (rating >= 1.0 && rating < 2.0) {
+                    content = "Tệ";
                 } else if (rating < 1.0) {
-                    tvReview.setText("Rất Tệ");
+                    content = "Rất Tệ";
                 }
+                tvReview.setText(content);
             }
         });
 

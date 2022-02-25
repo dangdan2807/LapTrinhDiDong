@@ -65,7 +65,6 @@ public class Layout1 extends AppCompatActivity implements View.OnClickListener {
             boolean result = login(name, password);
             if (result)
                 showMessages("Đăng nhập thành công");
-
         } else if (o.equals(btnForgotPassword))
             Toast.makeText(context, "Coming soon...", Toast.LENGTH_LONG).show();
     }
