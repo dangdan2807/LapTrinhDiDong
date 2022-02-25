@@ -94,15 +94,12 @@ public class Layout3 extends AppCompatActivity implements View.OnClickListener {
             boolean isUpCase = chkUpCase.isChecked();
             boolean isNumberChecked = chkNumber.isChecked();
             boolean isSpecialSymbol = chkSpecialSymbol.isChecked();
+
             String arrCharacters = "";
-            if (isLowerCase)
-                arrCharacters += arrLowerCase;
-            if (isUpCase)
-                arrCharacters += arrUpperCase;
-            if (isNumberChecked)
-                arrCharacters += arrDigit;
-            if (isSpecialSymbol)
-                arrCharacters += arrSpecialSymbol;
+            arrCharacters += isLowerCase ? arrLowerCase : "";
+            arrCharacters += isUpCase ? arrUpperCase : "";
+            arrCharacters += isNumberChecked ? arrDigit : "";
+            arrCharacters += isSpecialSymbol ? arrSpecialSymbol : "";
 
             SecureRandom random = new SecureRandom();
             StringBuilder sb = new StringBuilder();
@@ -112,126 +109,42 @@ public class Layout3 extends AppCompatActivity implements View.OnClickListener {
             }
             edtPassword.setText(sb.toString());
         } else if (o.equals(chkLowerCase)) {
-            if (!chkLowerCase.isChecked()) {
-                if (!chkUpCase.isChecked()) {
-                    if (!chkNumber.isChecked()) {
-                        chkSpecialSymbol.setChecked(true);
-                        chkSpecialSymbol.setEnabled(false);
-                    } else if (!chkSpecialSymbol.isChecked()) {
-                        chkNumber.setChecked(true);
-                        chkNumber.setEnabled(false);
-                    }
-                } else if (!chkNumber.isChecked()) {
-                    if (!chkUpCase.isChecked()) {
-                        chkSpecialSymbol.setChecked(true);
-                        chkSpecialSymbol.setEnabled(false);
-                    } else if (!chkSpecialSymbol.isChecked()) {
-                        chkUpCase.setChecked(true);
-                        chkUpCase.setEnabled(false);
-                    }
-                } else if (!chkSpecialSymbol.isChecked()) {
-                    if (!chkUpCase.isChecked()) {
-                        chkNumber.setChecked(true);
-                        chkNumber.setEnabled(false);
-                    } else if (!chkNumber.isChecked()) {
-                        chkUpCase.setChecked(true);
-                        chkUpCase.setEnabled(false);
-                    }
-                }
-            } else if (chkLowerCase.isChecked() || chkUpCase.isChecked() || chkNumber.isChecked() || chkSpecialSymbol.isChecked()) {
-                setTrueAllCheckBox();
-            }
+            checkChk(chkLowerCase, chkUpCase, chkNumber, chkSpecialSymbol);
         } else if (o.equals(chkUpCase)) {
-            if (!chkUpCase.isChecked()) {
-                if (!chkLowerCase.isChecked()) {
-                    if (!chkNumber.isChecked()) {
-                        chkSpecialSymbol.setChecked(true);
-                        chkSpecialSymbol.setEnabled(false);
-                    } else if (!chkSpecialSymbol.isChecked()) {
-                        chkNumber.setChecked(true);
-                        chkNumber.setEnabled(false);
-                    }
-                } else if (!chkNumber.isChecked()) {
-                    if (!chkLowerCase.isChecked()) {
-                        chkSpecialSymbol.setChecked(true);
-                        chkSpecialSymbol.setEnabled(false);
-                    } else if (!chkSpecialSymbol.isChecked()) {
-                        chkLowerCase.setChecked(true);
-                        chkLowerCase.setEnabled(false);
-                    }
-                } else if (!chkSpecialSymbol.isChecked()) {
-                    if (!chkLowerCase.isChecked()) {
-                        chkNumber.setChecked(true);
-                        chkNumber.setEnabled(false);
-                    } else if (!chkNumber.isChecked()) {
-                        chkLowerCase.setChecked(true);
-                        chkLowerCase.setEnabled(false);
-                    }
-                }
-            } else if (chkLowerCase.isChecked() || chkUpCase.isChecked() || chkNumber.isChecked() || chkSpecialSymbol.isChecked()) {
-                setTrueAllCheckBox();
-            }
+            checkChk(chkUpCase, chkLowerCase, chkNumber, chkSpecialSymbol);
         } else if (o.equals(chkNumber)) {
-            if (!chkNumber.isChecked()) {
-                if (!chkLowerCase.isChecked()) {
-                    if (!chkUpCase.isChecked()) {
-                        chkSpecialSymbol.setChecked(true);
-                        chkSpecialSymbol.setEnabled(false);
-                    } else if (!chkSpecialSymbol.isChecked()) {
-                        chkUpCase.setChecked(true);
-                        chkUpCase.setEnabled(false);
-                    }
-                } else if (!chkUpCase.isChecked()) {
-                    if (!chkLowerCase.isChecked()) {
-                        chkSpecialSymbol.setChecked(true);
-                        chkSpecialSymbol.setEnabled(false);
-                    } else if (!chkSpecialSymbol.isChecked()) {
-                        chkLowerCase.setChecked(true);
-                        chkLowerCase.setEnabled(false);
-                    }
-                } else if (!chkSpecialSymbol.isChecked()) {
-                    if (!chkUpCase.isChecked()) {
-                        chkLowerCase.setChecked(true);
-                        chkLowerCase.setEnabled(false);
-                    } else if (!chkLowerCase.isChecked()) {
-                        chkUpCase.setChecked(true);
-                        chkUpCase.setEnabled(false);
-                    }
-                }
-            } else if (chkLowerCase.isChecked() || chkUpCase.isChecked() || chkNumber.isChecked() || chkSpecialSymbol.isChecked()) {
-                setTrueAllCheckBox();
-            }
+            checkChk(chkNumber, chkLowerCase, chkUpCase, chkSpecialSymbol);
         } else if (o.equals(chkSpecialSymbol)) {
-            if (!chkSpecialSymbol.isChecked()) {
-                if (!chkLowerCase.isChecked()) {
-                    if (!chkUpCase.isChecked()) {
-                        chkNumber.setChecked(true);
-                        chkNumber.setEnabled(false);
-                    } else if (!chkNumber.isChecked()) {
-                        chkUpCase.setChecked(true);
-                        chkUpCase.setEnabled(false);
-                    }
-                } else if (!chkUpCase.isChecked()) {
-                    if (!chkLowerCase.isChecked()) {
-                        chkNumber.setChecked(true);
-                        chkNumber.setEnabled(false);
-                    } else if (!chkNumber.isChecked()) {
-                        chkLowerCase.setChecked(true);
-                        chkLowerCase.setEnabled(false);
-                    }
-                } else if (!chkNumber.isChecked()) {
-                    if (!chkUpCase.isChecked()) {
-                        chkLowerCase.setChecked(true);
-                        chkLowerCase.setEnabled(false);
-                    } else if (!chkLowerCase.isChecked()) {
-                        chkUpCase.setChecked(true);
-                        chkUpCase.setEnabled(false);
-                    }
-                }
-            } else if (chkLowerCase.isChecked() || chkUpCase.isChecked() || chkNumber.isChecked() || chkSpecialSymbol.isChecked()) {
-                setTrueAllCheckBox();
-            }
+            checkChk(chkSpecialSymbol, chkLowerCase, chkUpCase, chkNumber);
         }
+    }
+
+    private void checkChk(CheckBox chk1, CheckBox chk2, CheckBox chk3, CheckBox chk4) {
+        if (!chk1.isChecked()) {
+            if (!chk2.isChecked()) {
+                if (!chk3.isChecked())
+                    blockFinallyElement(chk4);
+                else if (!chk4.isChecked())
+                    blockFinallyElement(chk3);
+            } else if (!chk3.isChecked()) {
+                if (!chk2.isChecked())
+                    blockFinallyElement(chk4);
+                else if (!chk4.isChecked())
+                    blockFinallyElement(chk2);
+            } else if (!chk4.isChecked()) {
+                if (!chk3.isChecked())
+                    blockFinallyElement(chk2);
+                else if (!chk2.isChecked())
+                    blockFinallyElement(chk3);
+            }
+        } else if (chk1.isChecked() || chk2.isChecked() || chk3.isChecked() || chk4.isChecked()) {
+            setTrueAllCheckBox();
+        }
+    }
+
+    private void blockFinallyElement(CheckBox chk) {
+        chk.setChecked(true);
+        chk.setEnabled(false);
     }
 
     private void setTrueAllCheckBox() {
