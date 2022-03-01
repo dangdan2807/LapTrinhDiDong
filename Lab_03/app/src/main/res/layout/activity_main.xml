@@ -21,8 +21,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/main_btn1"
-        android:layout_width="wrap_content"
+        android:id="@+id/main_btnA"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
@@ -31,23 +31,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/main_btn2"
-        android:layout_width="wrap_content"
+        android:id="@+id/main_btnC"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="3_B"
-        app:layout_constraintBottom_toBottomOf="@+id/main_btn1"
-        app:layout_constraintEnd_toStartOf="@+id/main_btn3"
-        app:layout_constraintStart_toEndOf="@+id/main_btn1"
-        app:layout_constraintTop_toTopOf="@+id/main_btn1"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/main_btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
         android:text="3_C"
-        app:layout_constraintBottom_toBottomOf="@+id/main_btn2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/main_btn2" />
+        app:layout_constraintBottom_toBottomOf="@+id/main_btnA"
+        app:layout_constraintStart_toEndOf="@+id/main_btnA"
+        app:layout_constraintTop_toTopOf="@+id/main_btnA"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

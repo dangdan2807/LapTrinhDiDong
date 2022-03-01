@@ -8,7 +8,7 @@
     tools:context=".Layout3A">
 
     <View
-        android:id="@+id/layoutTiki_view1"
+        android:id="@+id/layout3A_view1"
         android:layout_width="wrap_content"
         android:layout_height="270dp"
         android:background="@color/white"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/layoutTiki_imageBook"
+        android:id="@+id/layout3A_imageBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/tiki_book" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvProductName"
+        android:id="@+id/layout3A_tvProductName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -38,11 +38,11 @@
         android:textColor="@color/black"
         android:textSize="12dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageBook"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view1" />
+        app:layout_constraintStart_toEndOf="@+id/layout3A_imageBook"
+        app:layout_constraintTop_toTopOf="@+id/layout3A_view1" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvSupplier"
+        android:id="@+id/layout3A_tvSupplier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -51,11 +51,11 @@
         android:textColor="@color/black"
         android:textSize="12dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageBook"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvProductName" />
+        app:layout_constraintStart_toEndOf="@+id/layout3A_imageBook"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_tvProductName" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvPrice"
+        android:id="@+id/layout3A_tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
@@ -64,11 +64,11 @@
         android:textColor="#EE0D0D"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageBook"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvSupplier" />
+        app:layout_constraintStart_toEndOf="@+id/layout3A_imageBook"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_tvSupplier" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvOldPrice"
+        android:id="@+id/layout3A_tvOldPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
@@ -78,11 +78,11 @@
         android:textSize="12dp"
         android:textStyle="bold"
 
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageBook"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvPrice" />
+        app:layout_constraintStart_toEndOf="@+id/layout3A_imageBook"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_tvPrice" />
 
     <Button
-        android:id="@+id/layoutTiki_btnBuyLater"
+        android:id="@+id/layout3A_btnBuyLater"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
@@ -96,11 +96,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageBook"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvPrice" />
+        app:layout_constraintStart_toEndOf="@+id/layout3A_imageBook"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_tvPrice" />
 
     <Button
-        android:id="@+id/layoutTiki_btnSubtract"
+        android:id="@+id/layout3A_btnSubtract"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginLeft="24dp"
@@ -109,11 +109,11 @@
         android:drawableLeft="@drawable/btnminus"
         android:paddingLeft="8dp"
         android:text=""
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_imageBook"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_tvOldPrice" />
+        app:layout_constraintStart_toEndOf="@+id/layout3A_imageBook"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_tvOldPrice" />
 
     <Button
-        android:id="@+id/layoutTiki_btnMulti"
+        android:id="@+id/layout3A_btnMulti"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginLeft="12dp"
@@ -121,12 +121,12 @@
         android:drawableLeft="@drawable/btnadd"
         android:paddingLeft="8dp"
         android:text="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_tvCountOrder"
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_tvCountOrder"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_tvCountOrder" />
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_tvCountOrder"
+        app:layout_constraintStart_toEndOf="@+id/layout3A_tvCountOrder"
+        app:layout_constraintTop_toTopOf="@+id/layout3A_tvCountOrder" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvCountOrder"
+        android:id="@+id/layout3A_tvCountOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
@@ -134,12 +134,12 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_btnSubtract"
-        app:layout_constraintStart_toEndOf="@+id/layoutTiki_btnSubtract"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_btnSubtract" />
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_btnSubtract"
+        app:layout_constraintStart_toEndOf="@+id/layout3A_btnSubtract"
+        app:layout_constraintTop_toTopOf="@+id/layout3A_btnSubtract" />
 
     <TextView
-        android:id="@+id/layoutTiki_layoutTiki_tvTotalPrice"
+        android:id="@+id/layout3A_layoutTiki_tvTotalPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -149,14 +149,14 @@
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_imageBook" />
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_imageBook" />
 
     <Button
-        android:id="@+id/layoutTiki_btnSeeHere"
+        android:id="@+id/layout3A_btnSeeHere"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="118dp"
+        android:layout_marginBottom="6dp"
         android:backgroundTint="@color/white"
         android:paddingBottom="0dp"
         android:stateListAnimator="@null"
@@ -165,11 +165,12 @@
         android:textColor="#134FEC"
         android:textSize="12dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_layoutTiki_tvTotalPrice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_imageBook" />
+        app:layout_constraintTop_toTopOf="@+id/layout3A_layoutTiki_tvTotalPrice" />
 
     <Button
-        android:id="@+id/layoutTiki_btnVoucher"
+        android:id="@+id/layout3A_btnVoucher"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -184,13 +185,13 @@
         android:textStyle="bold"
         app:cornerRadius="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_layoutTiki_tvTotalPrice"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_layoutTiki_tvTotalPrice"
         app:rippleColor="#33AAAAAA"
         app:strokeColor="@color/black"
         app:strokeWidth="1dp" />
 
     <Button
-        android:id="@+id/layoutTiki_btnApply"
+        android:id="@+id/layout3A_btnApply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -202,21 +203,21 @@
         android:textAllCaps="false"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_view1"
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_view1"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <View
-        android:id="@+id/layoutTiki_view2"
+        android:id="@+id/layout3A_view2"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_view1" />
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_view1" />
 
     <TextView
-        android:id="@+id/layoutTiki_textView7"
+        android:id="@+id/layout3A_textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -226,10 +227,10 @@
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view2" />
+        app:layout_constraintTop_toTopOf="@+id/layout3A_view2" />
 
     <Button
-        android:id="@+id/layoutTiki_btnEnterHere"
+        android:id="@+id/layout3A_btnEnterHere"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginEnd="14dp"
@@ -238,28 +239,30 @@
         android:paddingTop="3dp"
         android:paddingRight="8dp"
         android:paddingBottom="0dp"
+        android:layout_marginBottom="2dp"
         android:stateListAnimator="@null"
         android:text="Nhập tại đây?"
         android:textAllCaps="false"
         android:textColor="#134FEC"
         android:textSize="12dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_textView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view2" />
+        app:layout_constraintTop_toTopOf="@+id/layout3A_textView7" />
 
     <View
-        android:id="@+id/layoutTiki_view3"
+        android:id="@+id/layout3A_view3"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_view2"
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_view2"
         tools:layout_editor_absoluteX="2dp" />
 
     <TextView
-        android:id="@+id/layoutTiki_textView8"
+        android:id="@+id/layout3A_textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -269,10 +272,10 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view3" />
+        app:layout_constraintTop_toTopOf="@+id/layout3A_view3" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvTempPayment"
+        android:id="@+id/layout3A_tvTempPayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
@@ -280,11 +283,11 @@
         android:textColor="#EE0D0D"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_textView8"
-        app:layout_constraintEnd_toEndOf="@+id/layoutTiki_view3" />
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_textView8"
+        app:layout_constraintEnd_toEndOf="@+id/layout3A_view3" />
 
     <View
-        android:id="@+id/layoutTiki_view4"
+        android:id="@+id/layout3A_view4"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:background="@color/white"
@@ -293,7 +296,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/layoutTiki_textView9"
+        android:id="@+id/layout3A_textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -303,10 +306,10 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/layoutTiki_view4" />
+        app:layout_constraintTop_toTopOf="@+id/layout3A_view4" />
 
     <TextView
-        android:id="@+id/layoutTiki_tvTotalPrice"
+        android:id="@+id/layout3A_tvTotalPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -314,11 +317,11 @@
         android:textColor="#EE0D0D"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutTiki_textView9"
+        app:layout_constraintBottom_toBottomOf="@+id/layout3A_textView9"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/layoutTiki_btnOrder"
+        android:id="@+id/layout3A_btnOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -332,6 +335,6 @@
         android:textStyle="bold"
         android:backgroundTint="@color/bgBtnE53935"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTiki_textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/layout3A_textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

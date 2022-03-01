@@ -8,16 +8,18 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnTiki;
+    private Button btnTiki, btnBuyPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnTiki = findViewById(R.id.main_btn1);
+        btnTiki = findViewById(R.id.main_btnA);
+        btnBuyPhone = findViewById(R.id.main_btnC);
 
         btnTiki.setOnClickListener(this);
+        btnBuyPhone.setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Object o = view;
         if(o.equals(btnTiki)) {
             Intent i = new Intent(MainActivity.this, Layout3A.class);
+            startActivity(i);
+        } else if (o.equals(btnBuyPhone)) {
+            Intent i = new Intent(MainActivity.this, Layout3C.class);
             startActivity(i);
         }
     }

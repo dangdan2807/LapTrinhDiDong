@@ -20,24 +20,24 @@ public class Layout3A extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout3);
+        setContentView(R.layout.activity_layout3_a);
 
         context = this;
 
-        btnMulti = findViewById(R.id.layoutTiki_btnMulti);
-        btnSubtract = findViewById(R.id.layoutTiki_btnSubtract);
-        btnBuyLater = findViewById(R.id.layoutTiki_btnBuyLater);
-        btnSeeHere = findViewById(R.id.layoutTiki_btnSeeHere);
-        btnVoucher = findViewById(R.id.layoutTiki_btnVoucher);
-        btnApply = findViewById(R.id.layoutTiki_btnApply);
-        btnEnterHere = findViewById(R.id.layoutTiki_btnEnterHere);
-        btnOrder = findViewById(R.id.layoutTiki_btnOrder);
+        btnMulti = findViewById(R.id.layout3A_btnMulti);
+        btnSubtract = findViewById(R.id.layout3A_btnSubtract);
+        btnBuyLater = findViewById(R.id.layout3A_btnBuyLater);
+        btnSeeHere = findViewById(R.id.layout3A_btnSeeHere);
+        btnVoucher = findViewById(R.id.layout3A_btnVoucher);
+        btnApply = findViewById(R.id.layout3A_btnApply);
+        btnEnterHere = findViewById(R.id.layout3A_btnEnterHere);
+        btnOrder = findViewById(R.id.layout3A_btnOrder);
 
-        tvCountOrderProduct = findViewById(R.id.layoutTiki_tvCountOrder);
-        tvOldPrice = findViewById(R.id.layoutTiki_tvOldPrice);
-        tvTempPayment = findViewById(R.id.layoutTiki_tvTempPayment);
-        tvTotalPrice = findViewById(R.id.layoutTiki_tvTotalPrice);
-        tvPrice = findViewById(R.id.layoutTiki_tvPrice);
+        tvCountOrderProduct = findViewById(R.id.layout3A_tvCountOrder);
+        tvOldPrice = findViewById(R.id.layout3A_tvOldPrice);
+        tvTempPayment = findViewById(R.id.layout3A_tvTempPayment);
+        tvTotalPrice = findViewById(R.id.layout3A_tvTotalPrice);
+        tvPrice = findViewById(R.id.layout3A_tvPrice);
 
         tvOldPrice.setPaintFlags(tvOldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
