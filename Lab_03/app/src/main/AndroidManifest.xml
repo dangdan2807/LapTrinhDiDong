@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_03">
         <activity
+            android:name=".Layout3_c2"
+            android:exported="false" />
+        <activity
             android:name=".Layout3C"
             android:exported="false" />
         <activity

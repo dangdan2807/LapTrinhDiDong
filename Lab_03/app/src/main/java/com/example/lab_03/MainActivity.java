@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         } else if (o.equals(btnBuyPhone)) {
             Intent i = new Intent(MainActivity.this, Layout3C.class);
+            i.putExtra("color", "blue");
             startActivity(i);
         }
     }

@@ -8,10 +8,11 @@
 
 
     <ImageView
-        android:id="@+id/layout3C_imagePhone"
+        android:id="@+id/layout3C_imageProduct"
         android:layout_width="250dp"
         android:layout_height="280dp"
         android:layout_marginTop="24dp"
+        android:tag="blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +29,7 @@
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout3C_imagePhone" />
+        app:layout_constraintTop_toBottomOf="@+id/layout3C_imageProduct" />
 
     <RatingBar
         android:id="@+id/layout3C_ratingBar"
@@ -117,9 +118,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="24dp"
         android:backgroundTint="#EE0A0A"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         android:text="CHỌN MUA"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -146,4 +149,5 @@
         app:layout_constraintStart_toEndOf="@+id/layout3C_textView6"
         app:layout_constraintTop_toTopOf="@+id/layout3C_textView6"
         app:layout_constraintVertical_bias="0.29" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
