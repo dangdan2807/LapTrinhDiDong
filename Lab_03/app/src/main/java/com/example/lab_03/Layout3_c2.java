@@ -66,18 +66,33 @@ public class Layout3_c2 extends AppCompatActivity implements View.OnClickListene
             tvColorName.setText("Bạc");
             imageProduct.setImageResource(R.drawable.vs_white);
             imageProduct.setTag(tag);
+            unlockBtnColor();
+            btnAquaColor.setEnabled(false);
         } else if (tag.equals("red")) {
             tvColorName.setText("Đỏ");
             imageProduct.setImageResource(R.drawable.vs_red);
             imageProduct.setTag(tag);
+            unlockBtnColor();
+            btnRedColor.setEnabled(false);
         } else if (tag.equals("blue")) {
             tvColorName.setText("Xanh dương");
             imageProduct.setImageResource(R.drawable.vs_blue);
             imageProduct.setTag(tag);
+            unlockBtnColor();
+            btnBlueColor.setEnabled(false);
         } else if (tag.equals("black")) {
             tvColorName.setText("Đen");
             imageProduct.setImageResource(R.drawable.vs_black);
             imageProduct.setTag(tag);
+            unlockBtnColor();
+            btnBlackColor.setEnabled(false);
         }
+    }
+
+    private void unlockBtnColor() {
+        btnAquaColor.setEnabled(true);
+        btnRedColor.setEnabled(true);
+        btnBlueColor.setEnabled(true);
+        btnBlackColor.setEnabled(true);
     }
 }
