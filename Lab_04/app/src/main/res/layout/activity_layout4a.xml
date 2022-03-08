@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".Layout4a">
+
+    <View
+        android:id="@+id/layout4a_navbarTop"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/layout4a_tvNavbarTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarTop"
+        app:layout_constraintEnd_toEndOf="@+id/layout4a_navbarTop"
+        app:layout_constraintStart_toStartOf="@+id/layout4a_navbarTop"
+        app:layout_constraintTop_toTopOf="@+id/layout4a_navbarTop" />
+
+    <ImageButton
+        android:id="@+id/layout4a_btnBackTop"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarTop"
+        app:layout_constraintStart_toStartOf="@+id/layout4a_navbarTop"
+        app:layout_constraintTop_toTopOf="@+id/layout4a_navbarTop"
+        app:srcCompat="@drawable/back_icon_2" />
+
+    <ImageButton
+        android:id="@+id/layout4a_btnCart"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarTop"
+        app:layout_constraintEnd_toEndOf="@+id/layout4a_navbarTop"
+        app:layout_constraintTop_toTopOf="@+id/layout4a_navbarTop"
+        app:srcCompat="@drawable/cart_icon" />
+
+    <View
+        android:id="@+id/layout4a_navbarBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/layout4a_btnMenu"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintStart_toStartOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintTop_toTopOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/menu_icon" />
+
+    <ImageButton
+        android:id="@+id/layout4a_btnHome"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintEnd_toEndOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintStart_toStartOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintTop_toTopOf="@+id/layout4a_navbarBottom"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/layout4a_btnBackBottom"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintEnd_toEndOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintTop_toTopOf="@+id/layout4a_navbarBottom"
+        app:srcCompat="@drawable/back_icon_1" />
+
+    <TextView
+        android:id="@+id/layout4a_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Bạn có thắc mắc với sản phẩm vừa xem đừng ngại\nchát với shop!"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout4a_navbarTop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4a_navbarBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ListView
+            android:id="@+id/layout4a_lvProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
