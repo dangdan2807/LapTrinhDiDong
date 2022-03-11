@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.lab_04.adapter.ProductAdapter;
+import com.example.lab_04.adapter.ProductAdapterLv;
 import com.example.lab_04.model.Product;
 
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class Layout4a extends AppCompatActivity implements View.OnClickListener 
         listProduct.add(new Product("Hiếu lòng con trẻ", "Minh Long Book", "hieu_long_con_tre"));
         listProduct.add(new Product("Donald Trump Thiên tài lãnh đạo", "Minh Long Book", "trump_1"));
 
-        ProductAdapter adapter = new ProductAdapter(this, R.layout.item_custom_list_view, listProduct);
+        ProductAdapterLv adapter = new ProductAdapterLv(this, R.layout.item_custom_list_view, listProduct);
         listView.setAdapter(adapter);
 
         btnBackTop.setOnClickListener(this);

@@ -8,21 +8,25 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.lab_04.R;
 import com.example.lab_04.model.Product;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
-public class ProductAdapter extends BaseAdapter {
+public class ProductAdapterGv extends BaseAdapter {
     private Context context;
     private int idLayout;
     private List<Product> listProduct;
     private int positionSelect = -1;
 
-    public ProductAdapter(Context context, int idLayout, List<Product> listProduct) {
+    public ProductAdapterGv(Context context, int idLayout, List<Product> listProduct) {
         this.context = context;
         this.idLayout = idLayout;
         this.listProduct = listProduct;
@@ -50,37 +54,44 @@ public class ProductAdapter extends BaseAdapter {
         if (view == null) {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(idLayout, viewGroup, false);
         }
-        TextView tvShopName = (TextView) view.findViewById(R.id.item_lv_tvShopName);
-        TextView tvProductName = (TextView) view.findViewById(R.id.item_lv_tvProductName);
-        ImageView imageView = view.findViewById(R.id.item_lv_logo);
-        final LinearLayout linearLayout = view.findViewById(R.id.item_lv_layout);
+        ImageView imageProduct = view.findViewById(R.id.item_gv_imageProduct);
+        TextView tvProductName = view.findViewById(R.id.item_gv_tvProductName);
+        TextView tvCountReview = view.findViewById(R.id.item_gv_tvCountReview);
+        TextView tvPrice = view.findViewById(R.id.item_gv_tvPrice);
+        TextView tvDiscount = view.findViewById(R.id.item_gv_tvDiscount);
+        RatingBar ratingBar = view.findViewById(R.id.item_gv_ratingBar);
+        final ConstraintLayout constraintLayout = view.findViewById(R.id.item_gv_layout);
         final Product product = listProduct.get(i);
 
+        DecimalFormat df = new DecimalFormat("#,###.##");
+
         if (listProduct != null && !listProduct.isEmpty()) {
-            tvShopName.setText(product.getShopName());
             tvProductName.setText(product.getProductName());
+            ratingBar.setRating((float) product.getRating());
+            ratingBar.setEnabled(false);
+            tvCountReview.setText("(" + df.format(product.getVote()) + ")");
+            tvPrice.setText(df.format(product.getPrice()) + " đ");
+            tvDiscount.setText("-" + df.format(product.getDiscount()) + "%");
+
             String productImage = product.getImageName();
             switch (productImage) {
-                case "ca_nau_lau":
-                    imageView.setImageResource(R.drawable.ca_nau_lau);
+                case "car_bus_btop_s2":
+                    imageProduct.setImageResource(R.drawable.car_bus_btop_s2);
                     break;
-                case "ga_bo_toi":
-                    imageView.setImageResource(R.drawable.ga_bo_toi);
+                case "dau_cam":
+                    imageProduct.setImageResource(R.drawable.dau_cam);
                     break;
-                case "xa_can_cau":
-                    imageView.setImageResource(R.drawable.xa_can_cau);
+                case "dau_chuyen_doi":
+                    imageProduct.setImageResource(R.drawable.dau_chuyen_doi);
                     break;
-                case "do_choi_dang_mo_hinh":
-                    imageView.setImageResource(R.drawable.do_choi_dang_mo_hinh);
+                case "dau_chuyen_doi_psps2":
+                    imageProduct.setImageResource(R.drawable.dau_chuyen_doi_psps2);
                     break;
-                case "lanh_dao_gian_don":
-                    imageView.setImageResource(R.drawable.lanh_dao_gian_don);
+                case "day_nguon":
+                    imageProduct.setImageResource(R.drawable.day_nguon);
                     break;
-                case "hieu_long_con_tre":
-                    imageView.setImageResource(R.drawable.hieu_long_con_tre);
-                    break;
-                case "trump_1":
-                    imageView.setImageResource(R.drawable.trump_1);
+                case "giac_chuyen":
+                    imageProduct.setImageResource(R.drawable.giac_chuyen);
                     break;
                 default:
                     break;
@@ -96,9 +107,9 @@ public class ProductAdapter extends BaseAdapter {
         });
 
         if (positionSelect == i) {
-            linearLayout.setBackgroundColor(Color.WHITE);
+            constraintLayout.setBackgroundColor(Color.WHITE);
         } else {
-            linearLayout.setBackgroundColor(Color.parseColor("#C4C4C4"));
+            constraintLayout.setBackgroundColor(Color.parseColor("#C4C4C4"));
         }
         return view;
     }

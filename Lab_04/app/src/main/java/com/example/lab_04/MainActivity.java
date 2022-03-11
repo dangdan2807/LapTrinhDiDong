@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(layoutA);
                 break;
             case R.id.mainLayout_btnB:
-                Toast.makeText(this, "coming soon ...", Toast.LENGTH_LONG);
+                Intent layoutB = new Intent(MainActivity.this, Layout4b.class);
+                startActivity(layoutB);
                 break;
         }
     }

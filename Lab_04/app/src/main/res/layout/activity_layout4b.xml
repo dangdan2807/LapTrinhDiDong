@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C4C4C4"
+    tools:context=".Layout4b">
+
+    <View
+        android:id="@+id/layout4b_navbarTop"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/layout4b_btnBackTop"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarTop"
+        app:layout_constraintStart_toStartOf="@+id/layout4b_navbarTop"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarTop"
+        app:srcCompat="@drawable/back_icon_2" />
+
+    <ImageButton
+        android:id="@+id/layout4b_btnCart"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#1BA9FF"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarTop"
+        app:layout_constraintStart_toEndOf="@+id/layout4b_edtSearch"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarTop"
+        app:srcCompat="@drawable/cart_icon" />
+
+    <View
+        android:id="@+id/layout4b_navbarBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/layout4b_btnMenu"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintStart_toStartOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/menu_icon" />
+
+    <ImageButton
+        android:id="@+id/layout4b_btnHome"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintEnd_toEndOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintStart_toStartOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarBottom"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/layout4b_btnBackBottom"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintEnd_toEndOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarBottom"
+        app:srcCompat="@drawable/back_icon_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <GridView
+            android:id="@+id/layout4b_gvProduct"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/layout4b_edtSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/search_icon"
+        android:ems="10"
+        android:hint="Nhập sản phẩm cần tìm ..."
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="Dây sạc usb"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarTop"
+        app:layout_constraintStart_toEndOf="@+id/layout4b_btnBackTop"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarTop"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/layout4b_btnMore"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="#1BA9FF"
+        app:layout_constraintBottom_toBottomOf="@+id/layout4b_navbarTop"
+        app:layout_constraintEnd_toEndOf="@+id/layout4b_navbarTop"
+        app:layout_constraintStart_toEndOf="@+id/layout4b_btnCart"
+        app:layout_constraintTop_toTopOf="@+id/layout4b_navbarTop"
+        app:srcCompat="@drawable/more_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
