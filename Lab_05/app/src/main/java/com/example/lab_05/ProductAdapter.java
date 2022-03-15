@@ -58,7 +58,7 @@ public class ProductAdapter extends BaseAdapter {
 
         final ConstraintLayout constraintLayout = view.findViewById(R.id.item_custom_list_view);
         final Product product = productList.get(i);
-        DecimalFormat df = new DecimalFormat("$#,###.##");
+        DecimalFormat df = new DecimalFormat("$#,###.00");
 
         if (productList.size() != 0 && !productList.isEmpty()) {
             tvProductName.setText(product.getName());
@@ -86,9 +86,9 @@ public class ProductAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, product.getName(), Toast.LENGTH_LONG).show();
-                positionSelect = i;
-                notifyDataSetChanged();
+//                Toast.makeText(context, product.getName(), Toast.LENGTH_LONG).show();
+//                positionSelect = i;
+//                notifyDataSetChanged();
             }
         });
 

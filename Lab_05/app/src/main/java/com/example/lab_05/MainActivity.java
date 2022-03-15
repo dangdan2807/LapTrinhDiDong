@@ -1,39 +1,45 @@
 package com.example.lab_05;
 
-import static android.graphics.Color.parseColor;
-
-import static com.example.lab_05.R.color.black;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
     private Button btnDonut, btnPinkDonut, btnFloating;
     private ImageButton btnSearch;
     private List<Product> productList;
+    private List<Product> tempProductList;
     private ListView listView;
     private ProductAdapter adapter;
+    private Context context;
+    private EditText edtSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this;
 
         btnSearch = findViewById(R.id.main_btnSearch);
         btnDonut = findViewById(R.id.main_btnDonut);
         btnPinkDonut = findViewById(R.id.main_btnPinkDonut);
         btnFloating = findViewById(R.id.main_btnFloating);
         listView = findViewById(R.id.main_lvProduct);
+        edtSearch = findViewById(R.id.main_edtSearch);
 
         productList = new ArrayList<>();
         productList.add(new Product("Tasty Donut", 10.0, "donut_yellow", "Spicy tasty donut family"));
@@ -44,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         adapter = new ProductAdapter(this, R.layout.item_custom_list_view, productList);
         listView.setAdapter(adapter);
         setFocusBtn(1);
+
+        listView.setOnItemClickListener(this);
 
         btnSearch.setOnClickListener(this);
         btnDonut.setOnClickListener(this);
@@ -56,15 +64,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.main_btnDonut:
                 setFocusBtn(1);
-                showProduct("all");
+                showProduct("all", "");
                 break;
             case R.id.main_btnFloating:
                 setFocusBtn(2);
-                showProduct("Floating Donut");
+                showProduct("Floating Donut", "");
                 break;
             case R.id.main_btnPinkDonut:
                 setFocusBtn(3);
-                showProduct("Pink Donut");
+                showProduct("Pink Donut", "");
+                break;
+            case R.id.main_btnSearch:
+                String keyword = edtSearch.getText().toString().toLowerCase(Locale.ROOT);
+                showProduct("search", keyword);
                 break;
             default:
                 Toast.makeText(this, "coming soon...", Toast.LENGTH_LONG).show();
@@ -91,17 +103,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void showProduct(String type) {
-        List<Product> tempProductList = new ArrayList<>();
+    private void showProduct(String type, String keyword) {
+        tempProductList = new ArrayList<>();
         if (type.equals("all"))
             tempProductList = productList;
-        else
+        else if (type.equals("search")) {
+            if (keyword.isEmpty() || keyword.equals(""))
+                tempProductList = productList;
+            else {
+                for (Product p : productList) {
+                    if (p.getName().contains(keyword)) {
+                        tempProductList.add(p);
+                    }
+                }
+            }
+        } else {
             for (Product p : productList) {
                 if (p.getName().equals(type))
                     tempProductList.add(p);
             }
+        }
         adapter = new ProductAdapter(this, R.layout.item_custom_list_view, tempProductList);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Intent intent = new Intent(context, DetailLayout.class);
+//        Bundle b = new Bundle();
+//        b.putString("name", tempProductList.get(i).getName());
+//        b.putString("desc", tempProductList.get(i).getDesc());
+//        b.putString("imageName", tempProductList.get(i).getImageName());
+//        b.putDouble("price", tempProductList.get(i).getPrice());
+//        intent.putExtras(b);
+        startActivity(intent);
     }
 }
