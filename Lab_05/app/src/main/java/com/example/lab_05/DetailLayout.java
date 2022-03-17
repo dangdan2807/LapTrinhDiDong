@@ -33,13 +33,16 @@ public class DetailLayout extends AppCompatActivity implements View.OnClickListe
         btnMinus = findViewById(R.id.detail_ibtnMinus);
         btnPlus = findViewById(R.id.detail_ibtnPlus);
 
-//        Intent i = getIntent();
-//        Bundle b = i.getExtras();
-//        tvProductName.setText(b.getString("name"));
-//        tvProductDesc.setText(b.getString("desc"));
-//        DecimalFormat df = new DecimalFormat("$#,###.00");
-//        tvProductPrice.setText(df.format(b.getDouble("price")));
-//        setImageProduct(b.getString("imageName"));
+        Intent intent = getIntent();
+        if (intent != null) {
+            tvProductName.setText(intent.getStringExtra("name"));
+            tvProductDesc.setText(intent.getStringExtra("desc"));
+            double price = intent.getDoubleExtra("price", 0.0);
+            DecimalFormat df = new DecimalFormat("$#,###.00");
+            tvProductPrice.setText(df.format(price));
+            String imageName = intent.getStringExtra("imageName");
+            setImageProduct(imageName != null ? imageName : "");
+        }
 
         btnAddToCard.setOnClickListener(this);
         btnMinus.setOnClickListener(this);
@@ -48,7 +51,23 @@ public class DetailLayout extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        String quantityStr = "";
         switch (view.getId()) {
+            case R.id.detail_ibtnPlus:
+                quantityStr = tvOrderQuantity.getText().toString();
+                if (!quantityStr.isEmpty() || quantityStr != null) {
+                    int quantity = Integer.parseInt(quantityStr);
+                    tvOrderQuantity.setText(++quantity + "");
+                }
+                break;
+            case R.id.detail_ibtnMinus:
+                quantityStr = tvOrderQuantity.getText().toString();
+                if (!quantityStr.isEmpty() || quantityStr != null) {
+                    int quantity = Integer.parseInt(quantityStr);
+                    if (quantity > 1)
+                        tvOrderQuantity.setText(--quantity + "");
+                }
+                break;
             default:
                 Toast.makeText(this, "Coming soon ...", Toast.LENGTH_LONG).show();
                 break;
