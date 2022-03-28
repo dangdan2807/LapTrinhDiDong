@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -135,95 +136,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         adapter.notifyDataSetChanged();
-    }
-
-    class ProductAdapter extends BaseAdapter {
-        private Context adapterContext;
-        private int idLayout;
-        private int positionSelect = -1;
-        private List<Product> productList;
-
-        public ProductAdapter(Context adapterContext, int idLayout, List<Product> productList) {
-            this.adapterContext = adapterContext;
-            this.idLayout = idLayout;
-            this.productList = productList;
-        }
-
-        @Override
-        public int getCount() {
-            if (productList.size() != 0 && !productList.isEmpty())
-                return productList.size();
-            return 0;
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            if (view == null) {
-                view = LayoutInflater.from(viewGroup.getContext())
-                        .inflate(idLayout, viewGroup, false);
-            }
-            ImageView imgProduct = view.findViewById(R.id.item_lv_productImage);
-            TextView tvProductName = view.findViewById(R.id.item_lv_productName);
-            TextView tvProductDesc = view.findViewById(R.id.item_lv_description);
-            TextView tvProductPrice = view.findViewById(R.id.item_lv_price);
-
-            ImageButton btnAddToCard = view.findViewById(R.id.item_lv_btnAdd);
-            final Product product = productList.get(i);
-            DecimalFormat df = new DecimalFormat("$#,###.00");
-
-            if (productList.size() != 0 && !productList.isEmpty()) {
-                tvProductName.setText(product.getName());
-                tvProductDesc.setText(product.getDesc());
-                tvProductPrice.setText(df.format(product.getPrice()));
-                String imageName = product.getImageName();
-                switch (imageName) {
-                    case "donut_red":
-                        imgProduct.setImageResource(R.drawable.donut_red);
-                        break;
-                    case "donut_yellow":
-                        imgProduct.setImageResource(R.drawable.donut_yellow);
-                        break;
-                    case "green_donut":
-                        imgProduct.setImageResource(R.drawable.green_donut);
-                        break;
-                    case "tasty_donut":
-                        imgProduct.setImageResource(R.drawable.tasty_donut);
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            btnAddToCard.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(adapterContext, "Coming soon ...", Toast.LENGTH_LONG).show();
-                }
-            });
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, DetailLayout.class);
-                    intent.putExtra("name", product.getName());
-                    intent.putExtra("desc", product.getDesc());
-                    intent.putExtra("imageName", product.getImageName());
-                    intent.putExtra("price", product.getPrice());
-                    startActivity(intent);
-                }
-            });
-
-            return view;
-        }
     }
 }

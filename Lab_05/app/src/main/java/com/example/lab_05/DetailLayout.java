@@ -35,12 +35,13 @@ public class DetailLayout extends AppCompatActivity implements View.OnClickListe
 
         Intent intent = getIntent();
         if (intent != null) {
-            tvProductName.setText(intent.getStringExtra("name"));
-            tvProductDesc.setText(intent.getStringExtra("desc"));
-            double price = intent.getDoubleExtra("price", 0.0);
+            Product product = (Product) intent.getSerializableExtra("product");
+            tvProductName.setText(product.getName());
+            tvProductDesc.setText(product.getDesc());
+            double price = product.getPrice();
             DecimalFormat df = new DecimalFormat("$#,###.00");
             tvProductPrice.setText(df.format(price));
-            String imageName = intent.getStringExtra("imageName");
+            String imageName = product.getImageName();
             setImageProduct(imageName != null ? imageName : "");
         }
 
