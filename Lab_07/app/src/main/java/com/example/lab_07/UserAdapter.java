@@ -43,11 +43,14 @@ public class UserAdapter extends BaseAdapter {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(idLayout, viewGroup, false);
         }
 
-        TextView tv = view.findViewById(R.id.lvLayout_itemName);
+        TextView tvName = view.findViewById(R.id.lvLayout_itemName);
+        TextView tvId = view.findViewById(R.id.lvLayout_itemId);
 
         if (!userList.isEmpty() && userList != null) {
             User user = userList.get(i);
-            tv.setText(user.getName());
+            tvId.setText(String.valueOf(user.getId()));
+            tvName.setText(user.getName());
+
         }
 
         return view;

@@ -37,6 +37,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
+    public  void resetDatabase() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("Drop Table if exists " + TABLE_NAME);
+        onCreate(db);
+    }
+
     public void addUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -101,7 +107,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return userList;
     }
 
-    public int updateContact(User user) {
+    public int updateUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -113,7 +119,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[]{String.valueOf(user.getId())});
     }
 
-    public void deleteContact(User user) {
+    public void deleteUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, KEY_ID + " = ?",
                 new String[]{String.valueOf(user.getId())});
