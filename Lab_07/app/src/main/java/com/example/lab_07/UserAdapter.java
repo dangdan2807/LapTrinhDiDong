@@ -50,7 +50,6 @@ public class UserAdapter extends BaseAdapter {
             User user = userList.get(i);
             tvId.setText(String.valueOf(user.getId()));
             tvName.setText(user.getName());
-
         }
 
         return view;

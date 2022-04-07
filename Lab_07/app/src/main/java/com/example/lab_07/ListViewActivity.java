@@ -21,7 +21,7 @@ public class ListViewActivity extends AppCompatActivity {
     private ListView listView;
     private Context context;
     private UserAdapter adapter;
-    private int selectedId = 0;
+    private int selectedId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class ListViewActivity extends AppCompatActivity {
         edt = findViewById(R.id.lvLayout_edtSearch);
         listView = findViewById(R.id.lvLayout_lv);
 
-        DatabaseHandler db = new DatabaseHandler(this);
+        UserDatabaseHandler db = new UserDatabaseHandler(this);
         db.resetDatabase();
 
         db.addUser(new User("Đỗ Anh Bôn"));
@@ -76,6 +76,7 @@ public class ListViewActivity extends AppCompatActivity {
                 if (data.equals("") || data.isEmpty()) {
                     Toast.makeText(context, "Tên không được để trỗng", Toast.LENGTH_LONG).show();
                 } else {
+
                     db.addUser(new User(data));
                     userList = db.getAllUser();
                     adapter = new UserAdapter(context, R.layout.lv_layout_item, userList);
@@ -105,8 +106,10 @@ public class ListViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 edt.setText("");
-                selectedId = 0;
+                selectedId = -1;
             }
         });
     }
+
+
 }

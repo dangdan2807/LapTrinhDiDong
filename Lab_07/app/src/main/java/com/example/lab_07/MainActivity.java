@@ -9,17 +9,17 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn1, btn2;
+    private Button btnLayout1, btnLayout2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = findViewById(R.id.main_btn1);
-        btn2 = findViewById(R.id.main_btn2);
+        btnLayout1 = findViewById(R.id.main_btn1);
+        btnLayout2 = findViewById(R.id.main_btn2);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, ListViewActivity.class);
@@ -27,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btnLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(MainActivity.this, CustomLV.class);
+                startActivity(i);
             }
         });
     }
