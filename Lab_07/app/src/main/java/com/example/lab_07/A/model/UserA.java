@@ -1,23 +1,23 @@
-package com.example.lab_07;
+package com.example.lab_07.A.model;
 
-public class User {
+public class UserA {
     private int id;
     private String name;
 
-    public User(int id, String name) {
+    public UserA(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public User(String name) {
+    public UserA(String name) {
         this.name = name;
     }
 
-    public User(int id) {
+    public UserA(int id) {
         this.id = id;
     }
 
-    public User() {
+    public UserA() {
     }
 
     public int getId() {

@@ -49,13 +49,24 @@ public class ShoeAdapter extends BaseAdapter {
         ImageView imgShoes = view.findViewById(R.id.item_imageShoe);
         TextView tvName = view.findViewById(R.id.item_tvName);
         TextView tvDetail = view.findViewById(R.id.item_tvDetail);
+        TextView tvPrice = view.findViewById(R.id.item_tvPrice);
+        TextView tvShoeWidth = view.findViewById(R.id.item_tvShoeWidth);
+        TextView tvSole = view.findViewById(R.id.item_tvSole);
+        TextView tvClosure = view.findViewById(R.id.item_tvClosure);
 
         final Shoe shoe = shoeList.get(i);
         if (shoeList.size() != 0 && !shoeList.isEmpty()) {
-            imgShoes.setImageResource(shoe.getImage());
+            int id = shoe.getImage();
+            imgShoes.setImageResource(id);
+            imgShoes.setTag(id);
+
             tvName.setText(shoe.getName());
             tvDetail.setText(shoe.getDetail());
+            tvPrice.setText(shoe.getPrice() + "");
+            tvShoeWidth.setText(shoe.getShoeWidth());
+            tvSole.setText(shoe.getSole());
+            tvClosure.setText(shoe.getClosure());
         }
-        return null;
+        return view;
     }
 }

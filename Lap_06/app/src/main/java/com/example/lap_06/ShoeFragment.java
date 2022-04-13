@@ -1,14 +1,20 @@
 package com.example.lap_06;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,16 +79,63 @@ public class ShoeFragment extends Fragment {
         listView = view.findViewById(R.id.shoesFragment_lv);
 
         shoeList = new ArrayList<>();
-        shoeList.add(new Shoe("Nike shoes-discount 50%", "Pls touch to see detail", R.drawable.shoes_purple));
-        shoeList.add(new Shoe("Adidas shoes-discount 80%", "Pls touch to see detail", R.drawable.shoes_blue));
-        shoeList.add(new Shoe("Nike Bicycle-discount 30%", "Pls touch to see detail", R.drawable.shoes_green));
-        shoeList.add(new Shoe("Yonex shoes-discount 50%", "Pls touch to see detail", R.drawable.shoes_pink));
-        shoeList.add(new Shoe("Victor shoes-discount 50%", "Pls touch to see detail", R.drawable.shoes_yellow));
-        shoeList.add(new Shoe("Lining shoes-discount 50%", "Pls touch to see detail", R.drawable.shoes_white));
-        shoeList.add(new Shoe("Binh Minh shoes-discount 90%", "Pls touch to see detail", R.drawable.shoes_1));
+        shoeList.add(
+                new Shoe("Nike shoes-discount 50%", "Pls touch to see detail", 100,
+                        "Small", "Rubber", R.drawable.shoes_purple, "Lace-up"));
+        shoeList.add(
+                new Shoe("Adidas shoes-discount 80%", "Pls touch to see detail", 123,
+                        "Medium", "Grip Rubber Sole", R.drawable.shoes_blue, "Lace-up"));
+        shoeList.add(
+                new Shoe("Nike Bicycle-discount 30%", "Pls touch to see detail", 24,
+                        "Large", "Padded Insole", R.drawable.shoes_green, "Lace-up"));
+        shoeList.add(
+                new Shoe("Yonex shoes-discount 50%", "Pls touch to see detail", 242,
+                        "Extra Large", "Rubber", R.drawable.shoes_pink, "Lace-up"));
+        shoeList.add(
+                new Shoe("Victor shoes-discount 50%", "Pls touch to see detail", 234,
+                        "Small", "Grip Rubber Sole", R.drawable.shoes_yellow, "Lace-up"));
+        shoeList.add(
+                new Shoe("Lining shoes-discount 50%", "Pls touch to see detail", 973,
+                        "Medium", "Rubber", R.drawable.shoes_white, "Lace-up"));
+        shoeList.add(
+                new Shoe("Binh Minh shoes-discount 90%", "Pls touch to see detail", 238,
+                        "Large", "Padded Insole", R.drawable.shoes_1, "Lace-up"));
 
         shoeAdapter = new ShoeAdapter(getActivity(), R.layout.shoe_item, shoeList);
         listView.setAdapter(shoeAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                ShoeDetailFragment shoeDetailFragment = new ShoeDetailFragment();
+//                transaction.replace(R.id.fragment_shoe, shoeDetailFragment);
+//                transaction.commit();
+                Intent intent = new Intent(getActivity(), ShoeDetailActivity.class);
+                String name = getData(view, R.id.item_tvName);
+                String detail = getData(view, R.id.item_tvDetail);
+                double price = Double.parseDouble(getData(view, R.id.item_tvPrice));
+                String shoeWidth = getData(view, R.id.item_tvShoeWidth);
+                String sole = getData(view, R.id.item_tvSole);
+                int imageId = getImageId(view, R.id.item_imageShoe);
+                String closure = getData(view, R.id.item_tvClosure);
+                Shoe shoe = new Shoe(name, detail, price, shoeWidth, sole, imageId, closure);
+                intent.putExtra("shoe", shoe);
+                getActivity().startActivity(intent);
+            }
+        });
+
         return view;
+    }
+
+    private String getData(View view, int id) {
+        String data = ((TextView) view.findViewById(id)).getText().toString();
+        return data;
+    }
+
+    private int getImageId(View view, int id) {
+        ImageView img = view.findViewById(id);
+        int imageId = (Integer) img.getTag();
+        return imageId;
     }
 }

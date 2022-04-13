@@ -1,4 +1,4 @@
-package com.example.lab_07;
+package com.example.lab_07.B.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,23 +7,26 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.lab_07.B.entity.UserB;
+import com.example.lab_07.R;
+
 import java.util.List;
 
-public class UserAdapter extends BaseAdapter {
+public class UserBAdapter extends BaseAdapter {
     private Context context;
-    private List<User> userList;
+    private List<UserB> userBList;
     private int idLayout;
 
-    public UserAdapter(Context context, int idLayout, List<User> userList) {
+    public UserBAdapter(Context context, int idLayout, List<UserB> userBList) {
         this.context = context;
-        this.userList = userList;
+        this.userBList = userBList;
         this.idLayout = idLayout;
     }
 
     @Override
     public int getCount() {
-        if (userList.size() != 0 && !userList.isEmpty())
-            return userList.size();
+        if (userBList.size() != 0 && !userBList.isEmpty())
+            return userBList.size();
         return 0;
     }
 
@@ -46,10 +49,10 @@ public class UserAdapter extends BaseAdapter {
         TextView tvName = view.findViewById(R.id.lvLayout_itemName);
         TextView tvId = view.findViewById(R.id.lvLayout_itemId);
 
-        if (!userList.isEmpty() && userList != null) {
-            User user = userList.get(i);
-            tvId.setText(String.valueOf(user.getId()));
-            tvName.setText(user.getName());
+        if (!userBList.isEmpty() && userBList != null) {
+            UserB userB = userBList.get(i);
+            tvId.setText(String.valueOf(userB.getId()));
+            tvName.setText(userB.getName());
         }
 
         return view;

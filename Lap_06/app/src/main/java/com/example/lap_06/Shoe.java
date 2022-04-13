@@ -1,6 +1,8 @@
 package com.example.lap_06;
 
-public class Shoe {
+import java.io.Serializable;
+
+public class Shoe implements Serializable {
     private String name;
     private String detail;
     private double price;
@@ -27,6 +29,9 @@ public class Shoe {
         this.sole = "";
         this.image = image;
         this.closure = "";
+    }
+
+    public Shoe() {
     }
 
     public int getImage() {

@@ -7,9 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.lab_07.A.CustomLV;
+import com.example.lab_07.A.ListViewActivity;
+import com.example.lab_07.B.ListViewB;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLayout1, btnLayout2;
+    private Button btnLayout1, btnLayout2, btnLayout3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnLayout1 = findViewById(R.id.main_btn1);
         btnLayout2 = findViewById(R.id.main_btn2);
+        btnLayout3 = findViewById(R.id.main_btn3);
 
         btnLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, CustomLV.class);
+                startActivity(i);
+            }
+        });
+
+        btnLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, ListViewB.class);
                 startActivity(i);
             }
         });

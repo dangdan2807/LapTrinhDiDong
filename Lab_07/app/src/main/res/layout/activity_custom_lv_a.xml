@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomLV">
+    tools:context=".A.CustomLV">
 
     <EditText
         android:id="@+id/customLv_edt"
@@ -18,7 +18,7 @@
         android:drawablePadding="20dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="The place that you will visit in the future"
+        android:hint="The placeA that you will visit in the future"
         android:inputType="textMultiLine"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"

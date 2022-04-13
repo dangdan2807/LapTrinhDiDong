@@ -4,46 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="16dp"
-    android:layout_marginBottom="20dp"
-    android:id="@+id/shoe_item"
-    android:background="@drawable/background">
+    android:paddingBottom="4dp">
 
-    <ImageView
-        android:id="@+id/item_imageShoe"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoe_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/background"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/item_tvName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/item_imageShoe"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/item_tvDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="20dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/item_tvName" />
+        <TextView
+            android:id="@+id/item_tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:text="Name"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_tvDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:text="Detail"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/item_tvName" />
+
+        <TextView
+            android:id="@+id/item_tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/item_tvName" />
+
+        <TextView
+            android:id="@+id/item_tvShoeWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/item_tvName" />
+        <TextView
+            android:id="@+id/item_tvSole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/item_tvName" />
+        <TextView
+            android:id="@+id/item_tvClosure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/item_tvName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

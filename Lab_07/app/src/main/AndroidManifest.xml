@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_07">
         <activity
-            android:name=".CustomLV"
+            android:name=".B.ListViewB"
             android:exported="false" />
         <activity
-            android:name=".ListViewActivity"
+            android:name=".A.CustomLV"
+            android:exported="false" />
+        <activity
+            android:name=".A.ListViewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

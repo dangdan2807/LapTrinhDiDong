@@ -17,6 +17,5 @@ public class ShoeActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
             .add(R.id.fragment_shoe, shoeFragment, "shoeFragment")
             .commit();
-
     }
 }

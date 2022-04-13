@@ -1,6 +1,7 @@
-package com.example.lab_07;
+package com.example.lab_07.B;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,49 +13,59 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lab_07.B.DAO.UserBDao;
+import com.example.lab_07.B.Database.UserBRoomDatabase;
+import com.example.lab_07.B.adapter.UserBAdapter;
+import com.example.lab_07.B.entity.UserB;
+import com.example.lab_07.R;
+
 import java.util.List;
 
-public class ListViewActivity extends AppCompatActivity {
+public class ListViewB extends AppCompatActivity {
     private Button btnAdd, btnRemove, btnCancel;
     private EditText edt;
-    private List<User> userList;
+    private List<UserB> userBList;
     private ListView listView;
     private Context context;
-    private UserAdapter adapter;
+    private UserBAdapter adapter;
     private int selectedId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view);
+        setContentView(R.layout.activity_list_view_a);
         context = this;
 
-        btnAdd = findViewById(R.id.lvLayout_btnAdd);
-        btnRemove = findViewById(R.id.lvLayout_btnRemove);
-        btnCancel = findViewById(R.id.lvLayout_btnCancel);
-        edt = findViewById(R.id.lvLayout_edtSearch);
-        listView = findViewById(R.id.lvLayout_lv);
+        btnAdd = findViewById(R.id.lvLayoutB_btnAdd);
+        btnRemove = findViewById(R.id.lvLayoutB_btnRemove);
+        btnCancel = findViewById(R.id.lvLayoutB_btnCancel);
+        edt = findViewById(R.id.lvLayoutB_edtSearch);
+        listView = findViewById(R.id.lvLayoutB_lv);
 
-        UserDatabaseHandler db = new UserDatabaseHandler(this);
-        db.resetDatabase();
+        UserBRoomDatabase database = Room.databaseBuilder(this, UserBRoomDatabase.class, "Lab07")
+                .allowMainThreadQueries()
+                .build();
 
-        db.addUser(new User("Đỗ Anh Bôn"));
-        db.addUser(new User("Hoàng Quốc Cường"));
-        db.addUser(new User("Phạm Minh Dũng"));
-        db.addUser(new User("Châu Hoàng Duy"));
-        db.addUser(new User("Trần Nhật Duy"));
-        db.addUser(new User("Nguyễn Đình Hảo"));
-        db.addUser(new User("Hà Khã Huê"));
-        db.addUser(new User("Nguyễn Hoàng Hữu"));
-        db.addUser(new User("Lê Nguyễn Quang Linh"));
-        db.addUser(new User("Nguyễn Công Minh"));
-        db.addUser(new User("Nguyễn Hoàng Nghĩa"));
-        db.addUser(new User("Trần Thanh Nhã"));
-        db.addUser(new User("Trương Hoàng Anh Vũ"));
+        UserBDao userBDao = database.getUserBDao();
+//        userBDao.deleteAll();
 
-        userList = db.getAllUser();
+        userBDao.insert(new UserB(1, "Đỗ Anh Bôn"));
+//        userBDao.insert(new UserB("Hoàng Quốc Cường"));
+//        userBDao.insert(new UserB("Phạm Minh Dũng"));
+//        userBDao.insert(new UserB("Châu Hoàng Duy"));
+//        userBDao.insert(new UserB("Trần Nhật Duy"));
+//        userBDao.insert(new UserB("Nguyễn Đình Hảo"));
+//        userBDao.insert(new UserB("Hà Khã Huê"));
+//        userBDao.insert(new UserB("Nguyễn Hoàng Hữu"));
+//        userBDao.insert(new UserB("Lê Nguyễn Quang Linh"));
+//        userBDao.insert(new UserB("Nguyễn Công Minh"));
+//        userBDao.insert(new UserB("Nguyễn Hoàng Nghĩa"));
+//        userBDao.insert(new UserB("Trần Thanh Nhã"));
+//        userBDao.insert(new UserB("Trương Hoàng Anh Vũ"));
 
-        adapter = new UserAdapter(this, R.layout.lv_layout_item, userList);
+        userBList = userBDao.getAllUser();
+
+        adapter = new UserBAdapter(this, R.layout.lv_layout_item_a, userBList);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -77,9 +88,9 @@ public class ListViewActivity extends AppCompatActivity {
                     Toast.makeText(context, "Tên không được để trỗng", Toast.LENGTH_LONG).show();
                 } else {
 
-                    db.addUser(new User(data));
-                    userList = db.getAllUser();
-                    adapter = new UserAdapter(context, R.layout.lv_layout_item, userList);
+                    userBDao.insert(new UserB(data));
+                    userBList = userBDao.getAllUser();
+                    adapter = new UserBAdapter(context, R.layout.lv_layout_item_a, userBList);
                     listView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
@@ -93,9 +104,9 @@ public class ListViewActivity extends AppCompatActivity {
                 if (data.equals("") || data.isEmpty()) {
                     Toast.makeText(context, "Tên không được để trỗng", Toast.LENGTH_LONG).show();
                 } else {
-                    db.deleteUser(new User(selectedId));
-                    userList = db.getAllUser();
-                    adapter = new UserAdapter(context, R.layout.lv_layout_item, userList);
+                    userBDao.deleteUser(selectedId);
+                    userBList = userBDao.getAllUser();
+                    adapter = new UserBAdapter(context, R.layout.lv_layout_item_a, userBList);
                     listView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
@@ -110,6 +121,4 @@ public class ListViewActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

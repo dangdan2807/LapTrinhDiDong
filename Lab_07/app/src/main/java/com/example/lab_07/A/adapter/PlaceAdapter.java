@@ -1,4 +1,4 @@
-package com.example.lab_07;
+package com.example.lab_07.A.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,23 +9,27 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.lab_07.A.database.PlaceDatabaseHandler;
+import com.example.lab_07.R;
+import com.example.lab_07.A.model.PlaceA;
+
 import java.util.List;
 
 public class PlaceAdapter extends BaseAdapter {
     private int idLayout;
-    private List<Place> placeList;
+    private List<PlaceA> placeAList;
     private Context context;
 
-    public PlaceAdapter(Context context, int idLayout, List<Place> placeList) {
+    public PlaceAdapter(Context context, int idLayout, List<PlaceA> placeAList) {
         this.context = context;
-        this.placeList = placeList;
+        this.placeAList = placeAList;
         this.idLayout = idLayout;
     }
 
     @Override
     public int getCount() {
-        if (placeList.size() != 0 && !placeList.isEmpty())
-            return placeList.size();
+        if (placeAList.size() != 0 && !placeAList.isEmpty())
+            return placeAList.size();
         return 0;
     }
 
@@ -48,17 +52,17 @@ public class PlaceAdapter extends BaseAdapter {
         ImageButton btnEdit = view.findViewById(R.id.customLvLayout_itemBtnEdit);
         ImageButton btnDelete = view.findViewById(R.id.customLvLayout_itemBtnDelete);
 
-        if (!placeList.isEmpty() && placeList != null) {
-            Place place = placeList.get(i);
-            tvId.setText(String.valueOf(place.getId()));
+        if (!placeAList.isEmpty() && placeAList != null) {
+            PlaceA placeA = placeAList.get(i);
+            tvId.setText(String.valueOf(placeA.getId()));
             int index = i + 1;
-            tvName.setText(index + ". " + place.getName());
+            tvName.setText(index + ". " + placeA.getName());
 
             btnEdit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     EditText edt = view.findViewById(R.id.customLv_edt);
-                    String name = place.getName();
+                    String name = placeA.getName();
                     edt.setText(name);
                 }
             });
@@ -67,7 +71,7 @@ public class PlaceAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View view) {
                     PlaceDatabaseHandler db = new PlaceDatabaseHandler(context);
-                    int id = place.getId();
+                    int id = placeA.getId();
                     db.deletePlace(id);
                 }
             });
