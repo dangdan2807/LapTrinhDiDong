@@ -1,23 +1,19 @@
 package com.example.lab_07.model;
 
-public class PlaceA {
+public class Place {
     private int id;
     private String name;
 
-    public PlaceA(int id, String name) {
+    public Place(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public PlaceA(int id) {
-        this.id = id;
-    }
-
-    public PlaceA(String name) {
+    public Place(String name) {
         this.name = name;
     }
 
-    public PlaceA() {
+    public Place() {
     }
 
     public int getId() {

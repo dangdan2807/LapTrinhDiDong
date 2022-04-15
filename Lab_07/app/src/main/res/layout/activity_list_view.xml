@@ -4,87 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomLV">
+    tools:context=".ListViewActivity">
 
     <EditText
-        android:id="@+id/customLv_edt"
+        android:id="@+id/lvLayout_edtSearch"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:drawableLeft="@drawable/human"
-        android:drawablePadding="20dp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
         android:ems="10"
-        android:gravity="start|top"
-        android:hint="The placeA that you will visit in the future"
-        android:inputType="textMultiLine"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textSize="20dp"
+        android:background="@drawable/border_background"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:hint="Put name to add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customLv_edt">
+        app:layout_constraintTop_toBottomOf="@+id/lvLayout_edtSearch">
 
         <Button
-            android:id="@+id/customLvLayout_btnSave"
+            android:id="@+id/lvLayout_btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#C94820"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textSize="20dp" />
+            android:backgroundTint="#208CC9"
+            android:text="Add"
+            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/customLvLayout_btnCancel"
+            android:id="@+id/lvLayout_btnRemove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#dc886e"
-            android:enabled="false"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:backgroundTint="#208CC9"
+            android:text="Remove"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/lvLayout_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#208CC9"
             android:text="Cancel"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textAllCaps="false" />
     </LinearLayout>
 
     <LinearLayout
+        android:background="#9ad1bd"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ListView
-            android:id="@+id/customLVLayout_lv"
+            android:id="@+id/lvLayout_lv"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

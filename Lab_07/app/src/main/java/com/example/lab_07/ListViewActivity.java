@@ -30,7 +30,7 @@ public class ListViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_a);
+        setContentView(R.layout.activity_list_view);
         context = this;
 
         btnAdd = findViewById(R.id.lvLayout_btnAdd);
@@ -58,7 +58,7 @@ public class ListViewActivity extends AppCompatActivity {
 
         userAList = db.getAllUser();
 
-        adapter = new UserAdapter(this, R.layout.lv_layout_item_a, userAList);
+        adapter = new UserAdapter(this, R.layout.lv_layout_item, userAList);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -83,7 +83,7 @@ public class ListViewActivity extends AppCompatActivity {
 
                     db.addUser(new UserA(data));
                     userAList = db.getAllUser();
-                    adapter = new UserAdapter(context, R.layout.lv_layout_item_a, userAList);
+                    adapter = new UserAdapter(context, R.layout.lv_layout_item, userAList);
                     listView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
@@ -99,7 +99,7 @@ public class ListViewActivity extends AppCompatActivity {
                 } else {
                     db.deleteUser(new UserA(selectedId));
                     userAList = db.getAllUser();
-                    adapter = new UserAdapter(context, R.layout.lv_layout_item_a, userAList);
+                    adapter = new UserAdapter(context, R.layout.lv_layout_item, userAList);
                     listView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
@@ -114,6 +114,5 @@ public class ListViewActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }

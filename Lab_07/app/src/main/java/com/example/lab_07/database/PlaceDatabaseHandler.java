@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.lab_07.model.PlaceA;
+import com.example.lab_07.model.Place;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,15 +45,15 @@ public class PlaceDatabaseHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addPlace(PlaceA placeA) {
+    public void addPlace(Place place) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, placeA.getName());
+        values.put(KEY_NAME, place.getName());
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
 
-    public PlaceA getPlace(int id) {
+    public Place getPlace(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(
                 TABLE_NAME,
@@ -64,22 +64,22 @@ public class PlaceDatabaseHandler extends SQLiteOpenHelper {
 
         if (cursor != null)
             cursor.moveToFirst();
-        PlaceA user = new PlaceA(
+        Place user = new Place(
                 Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1)
         );
         return user;
     }
 
-    public List<PlaceA> getAllPlace() {
-        List<PlaceA> userList = new ArrayList<>();
+    public List<Place> getAllPlace() {
+        List<Place> userList = new ArrayList<>();
         String selectQuery = "SELECT  * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         if (cursor.moveToFirst()) {
             do {
-                PlaceA user = new PlaceA();
+                Place user = new Place();
                 user.setId(Integer.parseInt(cursor.getString(0)));
                 user.setName(cursor.getString(1));
                 userList.add(user);
@@ -88,8 +88,8 @@ public class PlaceDatabaseHandler extends SQLiteOpenHelper {
         return userList;
     }
 
-    public List<PlaceA> getAllPlaceByName(String name) {
-        List<PlaceA> userList = new ArrayList<>();
+    public List<Place> getAllPlaceByName(String name) {
+        List<Place> userList = new ArrayList<>();
         String selectQuery = "SELECT  * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(selectQuery,
@@ -100,7 +100,7 @@ public class PlaceDatabaseHandler extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
-                PlaceA user = new PlaceA();
+                Place user = new Place();
                 user.setId(Integer.parseInt(cursor.getString(0)));
                 user.setName(cursor.getString(1));
                 userList.add(user);
@@ -109,15 +109,15 @@ public class PlaceDatabaseHandler extends SQLiteOpenHelper {
         return userList;
     }
 
-    public int updatePlace(PlaceA placeA) {
+    public int updatePlace(Place place) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, placeA.getName());
+        values.put(KEY_NAME, place.getName());
 
         // updating row
         return db.update(TABLE_NAME, values, KEY_ID + " = ?",
-                new String[]{String.valueOf(placeA.getId())});
+                new String[]{String.valueOf(place.getId())});
     }
 
     public void deletePlace(int id) {
