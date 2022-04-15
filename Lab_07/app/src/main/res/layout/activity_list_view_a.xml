@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".A.ListViewActivity">
+    tools:context=".ListViewActivity">
 
     <EditText
         android:id="@+id/lvLayout_edtSearch"
@@ -14,7 +14,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/border_background"
         android:drawableLeft="@drawable/user"
         android:drawablePadding="10dp"
         android:ems="10"
