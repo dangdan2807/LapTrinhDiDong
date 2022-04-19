@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/drawable/border_background.xml" value="0.22864583333333333" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/drawable/border_background_primary.xml" value="0.22864583333333333" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/layout-land/activity_face_screen.xml" value="0.3675675675675676" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/layout/activity_face_screen.xml" value="0.2364179037174423" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/layout/activity_main.xml" value="0.35820894502642775" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/layout/activity_register_screen.xml" value="0.2125" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/layout/activity_regiter_screen.xml" value="0.4799999863354132" />
+        <entry key="..\:/code/android/LapTrinhDiDong/Lab_08_Firebase/app/src/main/res/layout/activity_sign_in_screen.xml" value="0.2364179037174423" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
