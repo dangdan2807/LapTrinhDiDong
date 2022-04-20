@@ -32,7 +32,7 @@
         app:srcCompat="@drawable/matcuoi_xanh" />
 
     <EditText
-        android:id="@+id/RegisterA_edtName"
+        android:id="@+id/registerA_edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/RegisterA_edtEmail"
+        android:id="@+id/registerA_edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -55,15 +55,15 @@
         android:layout_marginRight="40dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:paddingStart="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/RegisterA_edtName"
+        app:layout_constraintEnd_toEndOf="@+id/registerA_edtName"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/RegisterA_edtName"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterA_edtName" />
+        app:layout_constraintStart_toStartOf="@+id/registerA_edtName"
+        app:layout_constraintTop_toBottomOf="@+id/registerA_edtName" />
 
     <EditText
-        android:id="@+id/RegisterA_edtPassword"
+        android:id="@+id/registerA_edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -71,14 +71,14 @@
         android:layout_marginRight="40dp"
         android:ems="10"
         android:hint="Type Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:paddingStart="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/RegisterA_edtEmail"
-        app:layout_constraintStart_toStartOf="@+id/RegisterA_edtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterA_edtEmail" />
+        app:layout_constraintEnd_toEndOf="@+id/registerA_edtEmail"
+        app:layout_constraintStart_toStartOf="@+id/registerA_edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/registerA_edtEmail" />
 
     <EditText
-        android:id="@+id/RegisterA_edtRePassword"
+        android:id="@+id/registerA_edtRePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -86,34 +86,34 @@
         android:layout_marginRight="40dp"
         android:ems="10"
         android:hint="Type RePassword"
-        android:inputType="textPersonName"
-        android:paddingStart="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/RegisterA_edtPassword"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/registerA_edtPassword"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/RegisterA_edtPassword"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterA_edtPassword" />
+        app:layout_constraintStart_toStartOf="@+id/registerA_edtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/registerA_edtPassword" />
 
     <Button
-        android:id="@+id/RegisterA_btnSignUp"
+        android:id="@+id/registerA_btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
         android:backgroundTint="#DF477B"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:text="SIGN UP"
         android:textSize="20dp"
         app:cornerRadius="50sp"
-        app:layout_constraintEnd_toEndOf="@+id/RegisterA_edtRePassword"
+        app:layout_constraintEnd_toEndOf="@+id/registerA_edtRePassword"
         app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="@+id/RegisterA_edtRePassword"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterA_edtRePassword"
+        app:layout_constraintStart_toStartOf="@+id/registerA_edtRePassword"
+        app:layout_constraintTop_toBottomOf="@+id/registerA_edtRePassword"
         app:strokeColor="@color/white" />
 
     <Button
-        android:id="@+id/RegisterA_btnRegisterGoogle"
+        android:id="@+id/registerA_btnRegisterGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -130,7 +130,7 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterA_btnSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/registerA_btnSignUp" />
 
     <View
         android:id="@+id/view"
@@ -181,7 +181,7 @@
             app:layout_constraintVertical_bias="0.509" />
 
         <Button
-            android:id="@+id/RegisterA_btnSignIn"
+            android:id="@+id/registerA_btnSignIn"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:backgroundTint="@android:color/transparent"
