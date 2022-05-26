@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.example.on_tap.adapter.Adapter;
 import com.example.on_tap.entity.Book;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,12 +25,16 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     private EditText edtBookName, edtAuthor;
-    private Button btnSave, btnLogout, btnClear;
+    private Button btnSave, btnClear;
     private ListView listView;
+
     private Context context;
     private DatabaseReference mDatabase;
-    private int i = 1;
+
+    private int lastId = 1;
     private int selectedId = 0;
+
+    private final String TABLE_NAME = "books";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +47,8 @@ public class HomeActivity extends AppCompatActivity {
         edtBookName = findViewById(R.id.home_edtBookName);
         edtAuthor = findViewById(R.id.home_edtAuthorName);
         btnSave = findViewById(R.id.home_btnSave);
-        btnLogout = findViewById(R.id.home_btnLogout);
         btnClear = findViewById(R.id.home_btnClear);
         listView = findViewById(R.id.home_listView);
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                finish();
-            }
-        });
 
         layDuLieu();
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -71,9 +65,8 @@ public class HomeActivity extends AppCompatActivity {
                 if (!bookName.isEmpty() && !author.isEmpty()) {
                     if (selectedId == 0) {
                         layDuLieu();
-                        saveDuLieu(i, bookName, author);
-                        ++i;
-                        selectedId = 0;
+                        saveDuLieu(lastId, bookName, author);
+                        selectedId = lastId;
                     } else {
                         saveDuLieu(selectedId, bookName, author);
                     }
@@ -88,7 +81,6 @@ public class HomeActivity extends AppCompatActivity {
                 selectedId = book.getId();
                 edtBookName.setText(book.getTen());
                 edtAuthor.setText(book.getTacGia());
-                btnSave.setText("Cập nhật");
             }
         });
 
@@ -98,14 +90,13 @@ public class HomeActivity extends AppCompatActivity {
                 edtBookName.setText("");
                 edtAuthor.setText("");
                 selectedId = 0;
-                btnSave.setText("Thêm");
             }
         });
     }
 
     public void layDuLieu() {
         List<Book> list = new ArrayList<>();
-        mDatabase.child("books").addValueEventListener(new ValueEventListener() {
+        mDatabase.child(TABLE_NAME).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list.clear();
@@ -125,16 +116,17 @@ public class HomeActivity extends AppCompatActivity {
 
     public void saveDuLieu(int id, String bookName, String author) {
         Book book = new Book(id, bookName, author);
-        mDatabase.child("books").child(book.getId() + "").setValue(book);
+        mDatabase.child(TABLE_NAME).child(book.getId() + "").setValue(book);
     }
 
     public void loadDuLieu(List<Book> list) {
-        i = list.size() + 1;
+        int size = list.size();
+        lastId = list.get(size - 1).getId() + 1;
         Adapter adapter = new Adapter(this, R.layout.item, list);
         listView.setAdapter(adapter);
     }
 
     public void deleteDuLieu(int id) {
-        mDatabase.child("books").child(id + "").removeValue();
+        mDatabase.child(TABLE_NAME).child(id + "").removeValue();
     }
 }
