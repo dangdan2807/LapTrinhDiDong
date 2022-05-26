@@ -94,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                             DatabaseReference myRef = database.getReference("users");
 
                             User user = new User(name, email);
+                            user.setId(uid);
                             myRef.child(uid).setValue(user);
 
                             Toast.makeText(context, "Đăng ký tài khoản thành công", Toast.LENGTH_SHORT).show();
