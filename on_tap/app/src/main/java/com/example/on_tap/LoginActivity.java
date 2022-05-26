@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
 
     private User user;
-    private boolean flagHidePass = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        edtEmail = findViewById(R.id.login_edtEmail);
+        edtEmail = findViewById(R.id.login_edtUsername);
         edtPassword = findViewById(R.id.login_edtPassword);
         btnLogin = findViewById(R.id.login_btnLogin);
         btnRegister = findViewById(R.id.login_btnRegister);
@@ -74,30 +73,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(i);
-            }
-        });
-
-        edtPassword.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                final int DRAWABLE_LEFT = 0;
-                final int DRAWABLE_TOP = 1;
-                final int DRAWABLE_RIGHT = 2;
-                final int DRAWABLE_BOTTOM = 3;
-
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    if (event.getRawX() >= (edtPassword.getRight() - edtPassword.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                        if (flagHidePass) {
-                            edtPassword.setInputType(InputType.TYPE_TEXT_VARIATION_NORMAL);
-                            flagHidePass = false;
-                        } else {
-                            edtPassword.setInputType(129);
-                            flagHidePass = true;
-                        }
-                        return true;
-                    }
-                }
-                return false;
             }
         });
     }

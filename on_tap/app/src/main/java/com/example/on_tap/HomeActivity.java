@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         edtBookName = findViewById(R.id.home_edtBookName);
-        edtAuthor = findViewById(R.id.home_edtAuthorName);
+        edtAuthor = findViewById(R.id.home_edtAuthor);
         btnSave = findViewById(R.id.home_btnSave);
         btnClear = findViewById(R.id.home_btnClear);
         listView = findViewById(R.id.home_listView);
@@ -63,13 +63,7 @@ public class HomeActivity extends AppCompatActivity {
                     Toast.makeText(context, "Tên tác giả không được rỗng", Toast.LENGTH_SHORT).show();
                 }
                 if (!bookName.isEmpty() && !author.isEmpty()) {
-                    if (selectedId == 0) {
-                        layDuLieu();
-                        saveDuLieu(lastId, bookName, author);
-                        selectedId = lastId;
-                    } else {
-                        saveDuLieu(selectedId, bookName, author);
-                    }
+                    saveDuLieu(bookName, author);
                 }
             }
         });
@@ -114,8 +108,15 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    public void saveDuLieu(int id, String bookName, String author) {
-        Book book = new Book(id, bookName, author);
+    public void saveDuLieu(String bookName, String author) {
+        Book book = new Book(bookName, author);
+        if(selectedId != 0) {
+            book.setId(selectedId);
+        } else {
+            layDuLieu();
+            book.setId(lastId);
+            selectedId = lastId;
+        }
         mDatabase.child(TABLE_NAME).child(book.getId() + "").setValue(book);
     }
 

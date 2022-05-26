@@ -46,7 +46,7 @@ public class Adapter extends BaseAdapter {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(idLayout, viewGroup, false);
         }
         TextView tvBookName = view.findViewById(R.id.item_tvBookName);
-        TextView tvAuthorName = view.findViewById(R.id.item_tvAuthorName);
+        TextView tvAuthor = view.findViewById(R.id.item_tvAuthor);
         TextView tvId = view.findViewById(R.id.item_tvId);
         ImageButton imgBtnDelete = view.findViewById(R.id.item_imgBtnDelete);
 
@@ -54,7 +54,7 @@ public class Adapter extends BaseAdapter {
             Book book = list.get(i);
             tvId.setText(String.valueOf(book.getId()));
             tvBookName.setText(book.getTen());
-            tvAuthorName.setText(book.getTacGia());
+            tvAuthor.setText(book.getTacGia());
 
             imgBtnDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
