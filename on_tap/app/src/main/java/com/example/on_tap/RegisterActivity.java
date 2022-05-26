@@ -93,7 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference myRef = database.getReference("users");
 
-                            User user = new User(name, email, password);
+                            User user = new User(name, email);
                             myRef.child(uid).setValue(user);
 
                             Toast.makeText(context, "Đăng ký tài khoản thành công", Toast.LENGTH_SHORT).show();

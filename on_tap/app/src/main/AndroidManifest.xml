@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.03_19529651_PhamDangDan">
+        <service
+            android:name=".SyncDatabaseService"
+            android:exported="false"></service>
+
         <activity
-            android:name="com.example.on_tap.HomeActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.on_tap.RegisterActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.on_tap.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

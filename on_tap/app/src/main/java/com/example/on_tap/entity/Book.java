@@ -1,11 +1,18 @@
 package com.example.on_tap.entity;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.io.Serializable;
 
 @IgnoreExtraProperties
+@Entity(tableName = "books")
 public class Book implements Serializable {
+    @PrimaryKey
+    @NonNull
     private int id;
     private String ten;
     private String tacGia;
